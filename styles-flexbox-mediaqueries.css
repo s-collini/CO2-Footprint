@@ -1,0 +1,77 @@
+h1 {
+    color: darkolivegreen;
+}
+
+header {
+    background-color: lightgray;
+    padding: 1em;
+    
+    flex-basis: 100%;
+}
+
+header a {
+    color: darkolivegreen;
+}
+
+footer ul { 
+    text-align: right; 
+}
+
+footer ul li {
+    display: inline;
+}
+
+body { 
+    display: flex;
+    flex-wrap: wrap;
+
+}
+nav {
+    border: 1px solid darkolivegreen;
+    flex-basis: 20%;
+}
+
+nav a {
+    color: darkolivegreen;
+}
+
+@media screen and (min-width: 1024px){
+    main {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width: 1024px) {
+    article {
+        flex-basis: 100%;
+    }
+}
+
+nav ul { 
+    text-align: right; 
+}
+
+nav ul li {
+    display: inline;
+}
+
+img {
+    float:left;
+}
+
+footer {
+    background-color: lightgray;
+    
+    flex-basis: 100%;
+}
+
+footer a {
+    color: darkolivegreen;
+}
+
+footer ul { 
+    text-align: center; 
+}
+
+footer ul li {
+    display: inline;
+}
