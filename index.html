@@ -1,104 +1,326 @@
 <!DOCTYPE html>
 <html lang=" ">
-
-
-<head>
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="styles-flexbox-mediaqueries.css">
-  
-
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="styles-flexbox-mediaqueries.css"
+    />
 
     <title>ReduceYourFootprint Initiative</title>
-    
-    <!-- Bootstrap per CDN einbinden-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</head>
 
-<!--Header-->
-<body>
+    <!-- Bootstrap per CDN einbinden-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <!--Header-->
+  <body>
     <header>
-        
-        <img src="img/CO2_Footprint.jpg" alt="Website-Logo" width="100", height="100">
-    
-        <nav>
-            <ul>
-                <li>
-                    <form>
-                        <input type="text" name="suche" placeholder="Suche">
-                    </form>
-                </li>
-                <li><a href="contact.html">Kontakt</a></li>
-                <li><a href="FAQ.html">FAQ</a></li>
-                <li><a href= "news.html"> Aktuelles</a></li>
-            </ul>
-        </nav>
+      <img
+        id="header-img"
+        src="img/CO2_Footprint.jpg"
+        alt="Website-Logo"
+        width="150"
+        height="150"
+      />
+
+      <nav>
+        <div class="links">
+          <ul>
+            <li>
+              <form>
+                <input type="text" name="suche" placeholder="Suche" />
+              </form>
+            </li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="news.html"> Aktuelles</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <p></p>
-<!--Content-->
+    <!--Content-->
     <main>
-        <!--Navigationsbereich-->
-        <nav> 
-            <div id="content">
-            <ul>
+      <!--Navigationsbereich-->
+      <div class="mainsection"></div>
+      <nav>
+        <div class="sidebar">
+          <ul>
             <li><a href="facts.html">Fakten</a></li>
-                <li><a href="emissions.html">Emissionsdaten</a></li>
-                <li><a href="contribution.html">Beitrag leisten</a></li>
-                <li><a href="donation.html">Spenden</a></li>
-            </ul>   
-            </div>
-       </nav>
-        <p></p>
-        <!--Sektionen-->
-        <div id="section">
-        <section>
-            <h1>Willkommen bei ReduceYourFootprint Initiative</h1>
-            <p>
-
-            </p>
-        </section>
-    
-        <section>
-            <h2>Fakten</h2>
-            <p>
-                
-            </p>
-        </section>
-
-        <section>
-            <h2>CO<sub>2</sub>-Emissionsdaten</h2>
-            <p></p>
-        <!--Tabelle-->        
-            <table>
-                <thead>
-                    <tr>
-                        <th>Land</th>
-                        <th>Unternehmen</th>
-                        <th>CO<sub>2</sub>-Ausstoß</th>
-                    </tr>
-                </thead>
-            </table>
-        </section>
-        <p></p>
-
-        <section>
-            <h2>Beitrag leisten</h2>
-        </section>
+            <li><a href="emissions.html">Emissionsdaten</a></li>
+            <li><a href="contribution.html">Beitrag leisten</a></li>
+            <li><a href="donation.html">Spenden</a></li>
+          </ul>
         </div>
-         <P></p>
-    </main>
-    
-<!--Footer--> 
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="privacy.html">Datenschutz</a></li>
-                <li><a href="imprint.html">Impressum</a></li>
-                <li><a href="https://www.instagram.com/RYF">Instagram</a></li>
-            </ul>
-        </nav>
-    </footer>
+      </nav>
+      <p></p>
+      <!--Sektionen-->
+      <div id="title">
+        <section>
+          <h1>Willkommen bei ReduceYourFootprint Initiative</h1>
+          <p></p>
+        </section>
+      </div>
+      <div class="mainsection">
+        <section>
+          <h2>Fakten</h2>
+          <p></p>
+          <h5>CO2-Fußabdruck pro Kopf</h5>
+          <ul>
+            Weltweiter Durchschnitt: Der durchschnittliche CO2-Fußabdruck pro
+            Person liegt weltweit bei etwa 4,8 Tonnen CO2e pro Jahr.
+          </ul>
+          <ul>
+            Industrieländer: In den USA beträgt der durchschnittliche
+            CO2-Fußabdruck pro Person etwa 16,5 Tonnen CO2e pro Jahr, während er
+            in der EU bei etwa 7,2 Tonnen CO2e liegt.
+          </ul>
+          <ul>
+            Entwicklungsländer: In Indien liegt der CO2-Fußabdruck pro Person
+            bei etwa 1,9 Tonnen CO2e pro Jahr.
+          </ul>
 
-</body>
+          <h5>Quellen der CO2-Emissionen</h5>
+          <ul>
+            Energieproduktion: Verantwortlich für etwa 73% der globalen
+            Treibhausgasemissionen. Fossile Brennstoffe (Kohle, Öl, Gas) sind
+            die Hauptquelle.
+          </ul>
+          <ul>
+            Transport: Verursacht etwa 14% der globalen CO2-Emissionen.
+            Straßenverkehr
+          </ul>
+          <ul>
+            Industrie: Verursacht etwa 21% der globalen CO2-Emissionen,
+            hauptsächlich durch die Herstellung von Stahl, Zement und
+            Chemikalien.
+          </ul>
+          <ul>
+            Landwirtschaft und Ernährung: Verursachen etwa 19% der globalen
+            CO2-Emissionen. Rinderhaltung und Reisanbau sind bedeutende Quellen.
+          </ul>
+          <ul>
+            Abfall und Abwasser: Verantwortlich für etwa 3% der globalen
+            CO2-Emissionen.
+          </ul>
+
+          <h5>Auswirkungen auf das Klima</h5>
+          <ul>
+            Erderwärmung: Seit Beginn der industriellen Revolution ist die
+            globale Durchschnittstemperatur um etwa 1,2°C gestiegen.
+          </ul>
+          <ul>
+            Meeresspiegelanstieg: Der Meeresspiegel ist seit 1900 um etwa 20 cm
+            gestiegen, und es wird erwartet, dass er bis 2100 um weitere 26-82
+            cm steigt.
+          </ul>
+          <ul>
+            Extreme Wetterereignisse: Die Häufigkeit und Intensität von
+            Hitzewellen, Dürren, Überschwemmungen und Hurrikanen hat zugenommen.
+          </ul>
+        </section>
+
+        <section>
+          <h2>CO<sub>2</sub>-Emissionsdaten</h2>
+          <p></p>
+          <!--Tabelle-->
+          <table>
+            <thead>
+              <tr>
+                <th>Land</th>
+                <th>Unternehmen</th>
+                <th>CO<sub>2</sub>-Ausstoß</th>
+              </tr>
+            </thead>
+          </table>
+        </section>
+        <p></p>
+
+        <section>
+          <h2>Beitrag leisten</h2>
+          <p>Mobilität</p>
+
+          <h5>Möglichkeiten, nachhaltige Mobilität zu fördern</h5>
+          <ol>
+            Öffentliche Verkehrsmittel nutzen
+          </ol>
+          <ul>
+            Effizienz: Busse, Bahnen und Straßenbahnen haben eine höhere
+            Passagierkapazität und einen geringeren Pro-Kopf-Ausstoß von CO2 im
+            Vergleich zu privaten Autos.
+          </ul>
+          <ol>
+            Fahrradfahren und zu Fuß gehen
+          </ol>
+          <ul>
+            Gesundheit und Umwelt: Fahrradfahren und zu Fuß gehen sind
+            emissionsfrei und fördern gleichzeitig die körperliche Gesundheit.
+          </ul>
+          <ol>
+            Carsharing und Fahrgemeinschaften
+          </ol>
+          <ul>
+            Ressourcenschonung: Carsharing und Fahrgemeinschaften reduzieren die
+            Anzahl der Autos auf den Straßen und maximieren die Nutzung jedes
+            Fahrzeugs.
+          </ul>
+          <ol>
+            Effiziente Fahrweise
+          </ol>
+          <ul>
+            Kraftstoff sparen: Durch vorausschauendes Fahren, Einhalten der
+            Geschwindigkeitsbegrenzungen und regelmäßige Wartung des Fahrzeugs
+            kann der Kraftstoffverbrauch gesenkt und CO2-Emissionen reduziert
+            werden.
+          </ul>
+
+          <p>Energie</p>
+
+          <h5>Wege zu nachhaltiger Energie</h5>
+          <ol>
+            Erneuerbare Energiequellen nutzen
+          </ol>
+          <ul>
+            Solarenergie: Photovoltaikanlagen auf Dächern und Solarparks können
+            saubere Energie ohne direkte CO2-Emissionen erzeugen.
+          </ul>
+          <ul>
+            Windenergie: Windkraftanlagen an Land und auf See sind effiziente
+            und umweltfreundliche Energiequellen.
+          </ul>
+
+          <ol>
+            Energieeffizienz verbessern
+          </ol>
+          <ul>
+            Windenergie: Windkraftanlagen an Land und auf See sind effiziente
+            und umweltfreundliche Energiequellen.
+          </ul>
+          <ul>
+            Isolation und Dämmung: Gute Dämmung von Gebäuden verringert den
+            Heiz- und Kühlbedarf und spart Energie.
+          </ul>
+
+          <ol>
+            Grüner Strom
+          </ol>
+          <ul>
+            Ökostrom-Tarife: Der Wechsel zu einem Ökostrom-Anbieter unterstützt
+            den Ausbau erneuerbarer Energien.
+          </ul>
+
+          <p>Konsum</p>
+
+          <h5>Wege zu nachhaltigem Konsum</h5>
+          <ol>
+            Bewusster Einkauf
+          </ol>
+          <ul>
+            Nachhaltige Produkte: Kaufen Sie Produkte mit Umweltzertifikaten wie
+            Fairtrade, Bio oder FSC. Diese garantieren umweltfreundliche und
+            sozial verantwortliche Produktionsmethoden.
+          </ul>
+          <ul>
+            Qualität statt Quantität: Investieren Sie in langlebige, hochwertige
+            Produkte anstelle von kurzlebigen, billigen Alternativen.
+          </ul>
+
+          <ol>
+            Secondhand und Recycling
+          </ol>
+          <ul>
+            Secondhand-Produkte: Kaufen Sie gebrauchte Kleidung, Möbel und
+            Elektronik. Dies reduziert den Bedarf an neuen Produkten und spart
+            Ressourcen.
+          </ul>
+          <ul>
+            Recycling: Trennen Sie Abfälle und nutzen Sie Recyclingprogramme, um
+            Materialien wiederzuverwenden und die Nachfrage nach neuen
+            Rohstoffen zu senken.
+          </ul>
+
+          <ol>
+            Lokale Produkte und saisonale Ernährung
+          </ol>
+          <ul>
+            Regional und saisonal: Kaufen Sie lokale und saisonale Produkte, um
+            Transportemissionen zu reduzieren.
+          </ul>
+
+          <ol>
+            Umweltfreundliche Verpackungen
+          </ol>
+          <ul>
+            Verpackungsfreie Optionen: Nutzen Sie Läden, die Produkte ohne
+            Verpackung anbieten, und bringen Sie Ihre eigenen Behälter mit.
+          </ul>
+          <ul>
+            Biologisch abbaubare Verpackungen: Wählen Sie Produkte, die in
+            biologisch abbaubaren oder recycelbaren Verpackungen angeboten
+            werden.
+          </ul>
+
+          <p>Unsere Projekte</p>
+
+          <h5>Aufforstungsprojekte</h5>
+          <p>
+            Projektbeschreibung: Aufforstungsprojekte spielen eine entscheidende
+            Rolle im Kampf gegen den Klimawandel, da Bäume CO2 aus der
+            Atmosphäre absorbieren und speichern. Projekte wie das "Great Green
+            Wall"-Projekt in Afrika zielen darauf ab, große Gebiete mit Bäumen
+            zu bepflanzen, um die Bodenerosion zu stoppen und die CO2-Emissionen
+            zu reduzieren.
+          </p>
+          <h5>Erneuerbare Energien in Entwicklungsländern</h5>
+          <p>
+            Projektbeschreibung: Initiativen wie das "Lighting Africa"-Programm
+            fördern den Einsatz von Solarenergie und anderen erneuerbaren
+            Energien in ländlichen Gebieten von Entwicklungsländern. Durch die
+            Bereitstellung von erschwinglichen und zugänglichen Solarlampen und
+            Solarkits werden nicht nur CO2-Emissionen reduziert, sondern auch
+            die Lebensqualität und wirtschaftliche Entwicklung verbessert.
+          </p>
+          <h5>Klimaneutrale Städte</h5>
+          <p>
+            Projektbeschreibung: Klimaneutrale Stadtprojekte setzen sich zum
+            Ziel, den CO2-Fußabdruck von Städten auf null zu reduzieren, indem
+            sie auf erneuerbare Energien umsteigen, energetische
+            Gebäudesanierung vorantreiben, nachhaltige Mobilität fördern und
+            Abfallwirtschaftssysteme optimieren. Städte wie Kopenhagen und
+            Stockholm haben ehrgeizige Ziele zur Reduzierung ihrer
+            Treibhausgasemissionen und setzen innovative Lösungen um, um
+            klimaneutral zu werden.
+          </p>
+        </section>
+      </div>
+
+      <p></p>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <nav>
+        <ul>
+          <div class="links">
+            <li><a href="privacy.html">Datenschutz</a></li>
+            <li><a href="imprint.html">Impressum</a></li>
+            <li><a href="https://www.instagram.com/RYF">Instagram</a></li>
+          </div>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>

@@ -1,62 +1,127 @@
-
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
+/* === Zurücksetzen von grundlegenden Stilen=== */
+html {
+  height: 100%;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: left;
+}
+
+/* === Stile für Schriftarten -farben, etc. === 
+in Klassen und IDs*/
+
+.sidebar {
+  background-color: olivedrab;
+  height: auto;
+  width: 20%;
+  position: fixed;
+  left: 0;
+  overflow-x: hidden;
+  font-size: 20px;
+}
+
+#title {
+  color: olivedrab;
+  font-family: fantasy;
+  text-align: center;
+}
+
+/* === Stile fürs Layout === */
 
 /* Header*/
 header {
-    background-color: darkgrey;
-    flex-basis: 100%;
+  background-color: darkgrey;
+  height: 15%;
+  width: 100%;
 }
-/*Navigationsbereich im Header*/
-header nav ul {
-    text-align: right;  
+
+header img {
+  float: left;
 }
-/*Anordnung der Links im Header*/
-header nav ul li {
-    display: inline;
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: left;
+}
+
+.mainsection,
+#title {
+  width: 60%;
 }
 
 /* Content */
-main {
-    display: flex;
-    flex-basis: 100%;
-    }
- 
-div#content {
-    background-color: olivedrab;
-    text-align: left;
-    flex-basis: 40%;
+.mainsection {
+  text-align: left;
 }
 
-div#section {
-    text-align: left;
-    flex-basis: 60%
+.img {
 }
 
-/*Footer*/
 footer {
-    background-color: darkgrey;
-    clear: both;
-    flex-basis: 100%;
-}
-/*Links im Footer*/
-footer nav ul { 
-    text-align: center; 
-}
-/*Anordnung Links im Footer*/
-footer nav ul li {
-    display: inline;
+  background-color: darkgrey;
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/*Sonstiges*/
-section h1 {
-    color: olivedrab;
-    text-align: center;
+/* === Komponenten-Layout === */
+
+/*Pseudoklasse hover und visited für Links*/
+
+.links ul,
+.sidebar ul {
+  list-style-type: none;
 }
 
-img {
-    float:left;
+.links li,
+.links form li {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sidebar li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.links a,
+.links form {
+  margin-right: 16px;
+  color: olivedrab;
+  text-decoration: none;
+  flex-direction: row;
+}
+
+.sidebar a {
+  color: lightgrey;
+  text-decoration: none;
+}
+
+.links a:hover,
+.sidebar a:hover {
+  color: green;
+}
+
+.links a:visited,
+.sidebar a:visited {
+  color: blueviolet;
+}
+
+/* === Media Queries === */
+@media screen and (min-width: 768px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
 }
