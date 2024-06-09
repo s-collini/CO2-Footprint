@@ -10,7 +10,7 @@ body {
 }
 
 /* === Stile für Schriftarten -farben, etc. === 
-in Klassen und IDs*/
+  in Klassen und IDs*/
 
 .sidebar {
   background-color: olivedrab;
@@ -19,7 +19,7 @@ in Klassen und IDs*/
   position: fixed;
   left: 0;
   overflow-x: hidden;
-  float: left;
+  float: right;
 }
 
 #title {
@@ -70,7 +70,7 @@ footer {
 /*Pseudoklasse hover und visited für Links*/
 
 #header-img {
-  float: left;
+  float: right;
 }
 
 .links ul,
@@ -81,10 +81,10 @@ footer {
 header .links form,
 .links li {
   display: inline-flex;
-  float: left;
+  float: right;
 }
 
-header .links a {
+header .links li {
   justify-content: end;
   align-items: last baseline;
 }
@@ -110,10 +110,6 @@ footer .links li {
 .links a:hover,
 .sidebar a:hover {
   color: green;
-}
-
-.content li {
-  list-style-type: circle;
 }
 
 /* === Media Queries === */
