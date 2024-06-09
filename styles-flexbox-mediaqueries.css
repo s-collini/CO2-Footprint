@@ -7,7 +7,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  text-align: left;
 }
 
 /* === Stile für Schriftarten -farben, etc. === 
@@ -20,13 +19,18 @@ in Klassen und IDs*/
   position: fixed;
   left: 0;
   overflow-x: hidden;
-  font-size: 20px;
+  float: left;
 }
 
 #title {
   color: olivedrab;
   font-family: fantasy;
   text-align: center;
+}
+
+#sidenote {
+  color: darkgrey;
+  float: right;
 }
 
 /* === Stile fürs Layout === */
@@ -36,69 +40,66 @@ header {
   background-color: darkgrey;
   height: 15%;
   width: 100%;
-}
-
-header img {
-  float: left;
-}
-
-main {
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  text-align: left;
 }
 
-.mainsection,
-#title {
-  width: 60%;
+.content {
+  width: 75%;
+  float: right;
+  margin-right: 2%;
 }
 
-/* Content */
 .mainsection {
+  justify-content: flex-start;
   text-align: left;
 }
 
 .img {
 }
 
+/*Footer*/
 footer {
   background-color: darkgrey;
   height: 5%;
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* === Komponenten-Layout === */
 
 /*Pseudoklasse hover und visited für Links*/
 
+#header-img {
+  float: left;
+}
+
 .links ul,
 .sidebar ul {
   list-style-type: none;
 }
 
-.links li,
-.links form li {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+header .links form,
+.links li {
+  display: inline-flex;
+  float: left;
 }
 
-.sidebar li {
-  display: flex;
-  justify-content: flex-start;
+header .links li {
+  justify-content: end;
+  align-items: last baseline;
+}
+
+footer .links li {
+  justify-content: center;
   align-items: center;
 }
 
 .links a,
 .links form {
+  font-size: medium;
   margin-right: 16px;
   color: olivedrab;
   text-decoration: none;
-  flex-direction: row;
 }
 
 .sidebar a {
@@ -109,11 +110,6 @@ footer {
 .links a:hover,
 .sidebar a:hover {
   color: green;
-}
-
-.links a:visited,
-.sidebar a:visited {
-  color: blueviolet;
 }
 
 /* === Media Queries === */
