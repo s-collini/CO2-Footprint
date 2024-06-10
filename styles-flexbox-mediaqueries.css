@@ -1,6 +1,7 @@
 /* === Zurücksetzen von grundlegenden Stilen=== */
 html {
   height: 100%;
+  display: flex;
 }
 
 body {
@@ -18,7 +19,6 @@ in Klassen und IDs*/
   width: 20%;
   position: fixed;
   left: 0;
-  overflow-x: hidden;
   float: left;
 }
 
@@ -30,7 +30,7 @@ in Klassen und IDs*/
 
 #sidenote {
   color: darkgrey;
-  float: right;
+  text-align: right;
 }
 
 /* === Stile fürs Layout === */
@@ -41,6 +41,8 @@ header {
   height: 15%;
   width: 100%;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content {
@@ -51,10 +53,6 @@ header {
 
 .mainsection {
   justify-content: flex-start;
-  text-align: left;
-}
-
-.img {
 }
 
 /*Footer*/
@@ -63,6 +61,8 @@ footer {
   height: 5%;
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* === Komponenten-Layout === */
@@ -70,7 +70,9 @@ footer {
 /*Pseudoklasse hover und visited für Links*/
 
 #header-img {
-  float: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .links ul,
@@ -78,25 +80,9 @@ footer {
   list-style-type: none;
 }
 
-header .links form,
-.links li {
-  display: inline-flex;
-  float: left;
-}
-
-header .links a {
-  justify-content: end;
-  align-items: last baseline;
-}
-
-footer .links li {
-  justify-content: center;
-  align-items: center;
-}
-
 .links a,
 .links form {
-  font-size: medium;
+  font-size: 100%;
   margin-right: 16px;
   color: olivedrab;
   text-decoration: none;

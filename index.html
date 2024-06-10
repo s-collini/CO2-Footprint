@@ -37,17 +37,20 @@
       />
       <nav>
         <div class="links">
-          <ul>
-            <li>
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
               <form>
                 <input type="text" name="suche" placeholder="Suche" />
               </form>
             </li>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
-            <li><a href="news.html"> Aktuelles</a></li>
-            <li><a href="index.html"> DE</a></li>
-            <li><a href="/ae-index.html"> AE</a></li>
+            <li class="nav-item"><a href="news.html"> Aktuelles</a></li>
+            <li class="nav-item">
+              <a href="FAQ.html">FAQ</a>
+            </li>
+            <li class="nav-item"><a href="contact.html">Kontakt</a></li>
+
+            <li class="nav-item"><a href="index.html"> DE</a></li>
+            <li class="nav-item"><a href="/ae-index.html"> AE</a></li>
           </ul>
         </div>
       </nav>
@@ -161,15 +164,34 @@
           <section>
             <h2 id="emissions">CO<sub>2</sub>-Emissionsdaten</h2>
             <p></p>
-            <!--Tabelle-->
-            <table>
+            <!--Tabelle von Bootstrap-->
+            <table class="table">
               <thead>
                 <tr>
-                  <th>Land</th>
-                  <th>Unternehmen</th>
-                  <th>CO<sub>2</sub>-Ausstoß</th>
+                  <th scope="col">Land</th>
+                  <th scope="col">Unternehmen</th>
+                  <th scope="col">Jährlicher CO<sub>2</sub>-Ausstoß</th>
                 </tr>
               </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th scope="row"></th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row"></th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row"></th>
+                  <td colspan="2"></td>
+                  <td></td>
+                </tr>
+              </tbody>
             </table>
           </section>
           <p></p>
@@ -242,6 +264,9 @@
                 >Der gesamte Text der Webseite wurde durch ChatGPT
                 generiert</small
               >
+              <p>
+                <small>Fotoquelle (ausgenommen Website-Logo): Pixabay</small>
+              </p>
             </div>
           </section>
         </div>
@@ -252,10 +277,14 @@
     <footer>
       <nav>
         <div class="links">
-          <ul>
-            <li><a href="privacy.html">Datenschutz</a></li>
-            <li><a href="imprint.html">Impressum</a></li>
-            <li><a href="https://www.instagram.com/RYF">Instagram</a></li>
+          <ul class="nav justify-content-center">
+            <li><a class="nav-item" href="privacy.html">Datenschutz</a></li>
+            <li><a class="nav-item" href="imprint.html">Impressum</a></li>
+            <li>
+              <a class="nav-item" href="https://www.instagram.com/RYF"
+                >Instagram</a
+              >
+            </li>
           </ul>
         </div>
       </nav>
