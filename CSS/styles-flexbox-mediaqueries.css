@@ -28,6 +28,10 @@ in Klassen und IDs*/
   text-align: center;
 }
 
+.content h3 {
+  font-weight: lighter;
+}
+
 #sidenote {
   color: darkgrey;
   text-align: right;
@@ -37,7 +41,7 @@ in Klassen und IDs*/
 
 /* Header*/
 header {
-  background-color: darkgrey;
+  background-color: lightgrey;
   height: 15%;
   width: 100%;
   display: flex;
@@ -57,7 +61,7 @@ header {
 
 /*Footer*/
 footer {
-  background-color: darkgrey;
+  background-color: lightgrey;
   height: 5%;
   width: 100%;
   display: flex;
@@ -73,6 +77,8 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 26%;
+  height: 26%;
 }
 
 .links ul,
@@ -82,7 +88,6 @@ footer {
 
 .links a,
 .links form {
-  font-size: 100%;
   margin-right: 16px;
   color: olivedrab;
   text-decoration: none;
@@ -100,6 +105,10 @@ footer {
 
 .content li {
   list-style-type: circle;
+}
+
+.content ol {
+  list-style-type: decimal;
 }
 
 /* === Media Queries === */
