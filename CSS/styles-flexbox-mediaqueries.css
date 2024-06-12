@@ -13,15 +13,6 @@ body {
 /* === Stile für Schriftarten -farben, etc. === 
 in Klassen und IDs*/
 
-.sidebar {
-  background-color: olivedrab;
-  height: auto;
-  width: 20%;
-  position: fixed;
-  left: 0;
-  float: left;
-}
-
 #title {
   color: olivedrab;
   font-family: fantasy;
@@ -35,6 +26,11 @@ in Klassen und IDs*/
 #sidenote {
   color: darkgrey;
   text-align: right;
+  font-size: 90%;
+}
+
+.card-body h5 {
+  font-size: 110%;
 }
 
 /* === Stile fürs Layout === */
@@ -42,7 +38,7 @@ in Klassen und IDs*/
 /* Header*/
 header {
   background-color: lightgrey;
-  height: 15%;
+  height: auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -57,6 +53,18 @@ header {
 
 .mainsection {
   justify-content: flex-start;
+}
+
+.sidebar {
+  background-color: olivedrab;
+  height: auto;
+  width: 20%;
+  position: fixed;
+  left: 0;
+  float: left;
+  padding-top: 1%;
+  font-weight: lighter;
+  font-size: 130%;
 }
 
 /*Footer*/
@@ -77,8 +85,8 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 26%;
-  height: 26%;
+  max-width: 26%;
+  height: auto;
 }
 
 .links ul,
@@ -107,16 +115,20 @@ footer {
   list-style-type: circle;
 }
 
-.content ol {
-  list-style-type: decimal;
+/* === Media Queries === */
+/* für Smartphones*/
+@media screen and (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+  #sidenote {
+    font-size: 60%;
+  }
 }
 
-/* === Media Queries === */
-@media screen and (min-width: 768px) {
+/* für Tablets*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   .sidebar {
-    padding-top: 15px;
-  }
-  .sidebar a {
-    font-size: 18px;
+    font-size: 110%;
   }
 }
