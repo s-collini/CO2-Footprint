@@ -23,7 +23,7 @@ in Klassen und IDs*/
   font-weight: lighter;
 }
 
-#sidenote {
+.sidenote {
   color: darkgrey;
   text-align: right;
   font-size: 90%;
@@ -77,6 +77,10 @@ footer {
   align-items: center;
 }
 
+section {
+  margin-top: 5%;
+}
+
 /* === Komponenten-Layout === */
 
 /*Pseudoklasse hover und visited für Links*/
@@ -92,6 +96,10 @@ footer {
 .links ul,
 .sidebar ul {
   list-style-type: none;
+}
+
+.links ul {
+  align-items: center;
 }
 
 .links a,
@@ -121,8 +129,16 @@ footer {
   .sidebar {
     display: none;
   }
-  #sidenote {
-    font-size: 60%;
+  .sidenote {
+    font-size: 70%;
+  }
+  .header {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .content {
+    width: 95%;
   }
 }
 
