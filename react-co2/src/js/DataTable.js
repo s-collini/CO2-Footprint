@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import data from "./data.json";
+import "./css/styles-flexbox-mediaqueries.css";
+import data from "./json/data.json";
 
 const DataTable = () => {
   const [tableData, setTableData] = useState([]);
@@ -16,20 +17,19 @@ const DataTable = () => {
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">Land</th>
-            <th scope="col">Unternehmen</th>
-            <th scope="col">
-              Jährlicher CO<sub>2</sub>-Ausstoß (kt)
+            <th>Land</th>
+            <th>Unternehmen</th>
+            <th>
+              Jährlicher CO<sub>2</sub>-Ausstoß (Mt)
             </th>
           </tr>
         </thead>
-        <tbody class="table-group-divider">
+        <tbody>
           {tableData.map((item, index) => (
             <tr key={index}>
-              <th scope="row"></th>
               <td>{item.Land}</td>
               <td>{item.Unternehmen}</td>
-              <td>{item.CO2 - Ausstoß}</td>
+              <td>{item.CO2_Ausstoß}</td>
             </tr>
           ))}
         </tbody>
