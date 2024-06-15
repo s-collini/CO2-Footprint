@@ -1,31 +1,39 @@
 import React, { useState } from "react";
 
 const DataTable = ({ data }) => {
-  const [sort, setSort] = useState(null);
+  const [sortConfig, setSortConfig] = useState({ key: "", direction: "" });
 
-  const sortData = (key) => {
-    setSort(key);
+  const sortData = (data) => {
+    if (!sortConfig.key) return data;
+    return [...data].sort((a, b) => {
+      if (a[sortConfig.key] < b[sortConfig.key]) {
+        return sortConfig.direction === "ascending" ? -1 : 1;
+      }
+      if (a[sortConfig.key] > b[sortConfig.key]) {
+        return sortConfig.direction === "ascending" ? 1 : -1;
+      }
+      return 0;
+    });
   };
 
-  const sortedData = React.useMemo(() => {
-    if (sort) {
-      return [...data].sort((a, b) => {
-        if (a[sort] < b[sort]) return -1;
-        if (a[sort] > b[sort]) return 1;
-        return 0;
-      });
+  const requestSort = (key) => {
+    let direction = "ascending";
+    if (sortConfig.key === key && sortConfig.direction === "ascending") {
+      direction = "descending";
     }
-    return data;
-  }, [data, sort]);
+    setSortConfig({ key, direction });
+  };
+
+  const sortedData = sortData(data);
 
   return (
     <table>
       <thead>
         <tr>
-          <th onClick={() => sortData("Land")}>Land</th>
-          <th onClick={() => sortData("Unternehmen")}>Unternehmen</th>
-          <th onClick={() => sortData("CO2_Ausstoß")}>
-            CO<sub>2</sub>-Ausstoß/Jahr(Mt)
+          <th onClick={() => requestSort("Land")}>Land</th>
+          <th onClick={() => requestSort("Unternehmen")}>Unternehmen</th>
+          <th>
+            CO<sub>2</sub>-Ausstoß/Jahr in Mt
           </th>
         </tr>
       </thead>
@@ -34,7 +42,7 @@ const DataTable = ({ data }) => {
           <tr key={index}>
             <td>{item.Land}</td>
             <td>{item.Unternehmen}</td>
-            <td>{item.CO2_Ausstoß}</td>
+            <td>{item.Co2_Ausstoß}</td>
           </tr>
         ))}
       </tbody>

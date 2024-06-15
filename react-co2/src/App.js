@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DataTable from "./DataTable";
+import "./css/styles.css";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -23,8 +24,8 @@ const App = () => {
 
   const filterData = data.filter(
     (item) =>
-      item.land.toLowerCase().includes(filterLand.toLowerCase()) &&
-      item.unternehmen.toLowerCase().includes(filterUnternehmen.toLowerCase())
+      item.Land.toLowerCase().includes(filterLand.toLowerCase()) &&
+      item.Unternehmen.toLowerCase().includes(filterUnternehmen.toLowerCase())
   );
 
   return (
