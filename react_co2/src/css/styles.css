@@ -1,0 +1,155 @@
+/* === Zurücksetzen von grundlegenden Stilen=== */
+html {
+  height: 100%;
+  display: flex;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* === Stile für Schriftarten -farben, etc. === 
+in Klassen und IDs*/
+
+#title {
+  color: olivedrab;
+  font-family: fantasy;
+  text-align: center;
+}
+
+.content h3 {
+  font-weight: lighter;
+}
+
+.sidenote {
+  color: darkgrey;
+  text-align: right;
+  font-size: 90%;
+}
+
+.card-body h5 {
+  font-size: 110%;
+}
+
+/* === Stile fürs Layout === */
+
+/* Header*/
+header {
+  background-color: lightgrey;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  width: 75%;
+  float: right;
+  margin-right: 2%;
+}
+
+.mainsection {
+  justify-content: flex-start;
+}
+
+.sidebar {
+  background-color: olivedrab;
+  height: auto;
+  width: 20%;
+  position: fixed;
+  left: 0;
+  float: left;
+  padding-top: 1%;
+  font-weight: lighter;
+  font-size: 130%;
+}
+
+/*Footer*/
+footer {
+  background-color: lightgrey;
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  margin-top: 5%;
+}
+
+/* === Komponenten-Layout === */
+
+/*Pseudoklasse hover und visited für Links*/
+
+#header-img {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 26%;
+  height: auto;
+}
+
+.links ul,
+.sidebar ul {
+  list-style-type: none;
+}
+
+.links ul {
+  align-items: center;
+}
+
+.links a,
+.links form {
+  margin-right: 16px;
+  color: olivedrab;
+  text-decoration: none;
+}
+
+.sidebar a {
+  color: lightgrey;
+  text-decoration: none;
+}
+
+.links a:hover,
+.sidebar a:hover {
+  color: green;
+}
+
+.content li {
+  list-style-type: circle;
+}
+
+label {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+/* === Media Queries === */
+/* für Smartphones*/
+@media screen and (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+  .sidenote {
+    font-size: 70%;
+  }
+  .header {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .content {
+    width: 95%;
+  }
+}
+
+/* für Tablets*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .sidebar {
+    font-size: 110%;
+  }
+}
