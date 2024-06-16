@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
+    <!--Einbinden der CSS-Datei für das Design-->
     <link rel="stylesheet" type="text/css" href="../src/css/styles.css" />
 
     <title>ReduceYourFootprint Initiative</title>
@@ -24,10 +25,10 @@
   <!--Header-->
   <body>
     <header>
-      <a href="/react_co2/public/index.html">
+      <a href="./index.html">
         <img
           id="header-img"
-          src="/react_co2/public/img/CO2_Footprint.jpg"
+          src="./img/CO2_Footprint.jpg"
           alt="Website-Logo"
           class="img-fluid"
         />
@@ -42,37 +43,30 @@
               </form>
             </li>
             <li class="nav-item">
-              <a href="/react_co2/public/html/news.html"> Aktuelles</a>
+              <a href="./html/news.html"> Aktuelles</a>
             </li>
             <li class="nav-item">
-              <a href="/react_co2/public/html/FAQ.html">FAQ</a>
+              <a href="./html/FAQ.html">FAQ</a>
             </li>
             <li class="nav-item">
-              <a href="/react_co2/public/html/contact.html">Kontakt</a>
+              <a href="./html/contact.html">Kontakt</a>
             </li>
 
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
-                href="/react_co2/public/index.html"
+                href="./index.html"
                 role="button"
                 aria-expanded="false"
                 >Sprache</a
               >
               <ul class="dropdown-menu">
                 <li>
-                  <a class="dropdown-item" href="/react_co2/public/index.html">
-                    DE</a
-                  >
+                  <a class="dropdown-item" href="./index.html"> DE</a>
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    href="/react_co2/public/html/ae-index.html"
-                  >
-                    AE</a
-                  >
+                  <a class="dropdown-item" href="./html/ae-index.html"> AE</a>
                 </li>
               </ul>
             </li>
@@ -192,6 +186,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+            <!--Tabelleninhalte von JSON werden hier in Form einer Tabelle eingefügt-->
             <div id="dataTable"></div>
           </section>
           <p></p>
@@ -204,10 +199,7 @@
               <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1 g-3">
                 <div class="col">
                   <div class="card">
-                    <img
-                      src="/react_co2/public/img/mobility.jpg"
-                      class="img-fluid"
-                    />
+                    <img src="./img/mobility.jpg" class="img-fluid" />
                     <div class="card-body">
                       <h5 class="card-title">Mobilität</h5>
                     </div>
@@ -215,10 +207,7 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img
-                      src="/react_co2/public/img/energy.jpg"
-                      class="img-fluid"
-                    />
+                    <img src="./img/energy.jpg" class="img-fluid" />
                     <div class="card-body">
                       <h5 class="card-title">Energie</h5>
                     </div>
@@ -226,10 +215,7 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img
-                      src="/react_co2/public/img/consumption.jpg"
-                      class="img-fluid"
-                    />
+                    <img src="./img/consumption.jpg" class="img-fluid" />
                     <div class="card-body">
                       <h5 class="card-title">Konsum</h5>
                     </div>
@@ -237,10 +223,7 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img
-                      src="/react_co2/public/img/projects.jpg"
-                      class="img-fluid"
-                    />
+                    <img src="./img/projects.jpg" class="img-fluid" />
                     <div class="card-body">
                       <h5 class="card-title">Unsere Projekte</h5>
                     </div>
@@ -292,14 +275,10 @@
         <div class="links">
           <ul class="nav justify-content-center">
             <li>
-              <a class="nav-item" href="/react_co2/public/html/privacy.html"
-                >Datenschutz</a
-              >
+              <a class="nav-item" href="./html/privacy.html">Datenschutz</a>
             </li>
             <li>
-              <a class="nav-item" href="/react_co2/public/html/imprint.html"
-                >Impressum</a
-              >
+              <a class="nav-item" href="./html/imprint.html">Impressum</a>
             </li>
             <li>
               <a class="nav-item" href="https://www.instagram.com/RYF"
@@ -310,7 +289,6 @@
         </div>
       </nav>
     </footer>
-
-    <script src="/react_co2/src/index.js"></script>
+    <script src="../src/index.js"></script>
   </body>
 </html>

@@ -115,7 +115,8 @@ section {
 }
 
 .links a:hover,
-.sidebar a:hover {
+.sidebar a:hover,
+.th:hover {
   color: green;
 }
 

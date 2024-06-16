@@ -31,8 +31,13 @@ const DataTable = ({ data }) => {
       <table className="table table-striped">
         <thead>
           <tr>
-            <th onClick={() => requestSort("Land")}>Land</th>
-            <th onClick={() => requestSort("Unternehmen")}>Unternehmen</th>
+            <th class="th" onClick={() => requestSort("Land")}>
+              {" "}
+              Land{" "}
+            </th>
+            <th class="th" onClick={() => requestSort("Unternehmen")}>
+              Unternehmen
+            </th>
             <th>
               CO<sub>2</sub>-Ausstoß/Jahr in Mt
             </th>
