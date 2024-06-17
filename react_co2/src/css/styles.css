@@ -103,7 +103,8 @@ section {
 }
 
 .links a,
-.links form {
+.links form,
+.nav-sm a {
   margin-right: 16px;
   color: olivedrab;
   text-decoration: none;
@@ -116,7 +117,8 @@ section {
 
 .links a:hover,
 .sidebar a:hover,
-.th:hover {
+.th:hover,
+.nav-sm a:hover {
   color: green;
 }
 
@@ -129,6 +131,10 @@ label {
   margin-left: 16px;
 }
 
+.nav-sm {
+  display: none;
+}
+
 /* === Media Queries === */
 /* für Smartphones*/
 @media screen and (max-width: 767px) {
@@ -138,13 +144,22 @@ label {
   .sidenote {
     font-size: 70%;
   }
-  .header {
-    justify-content: flex-start;
-    gap: 20px;
-  }
 
   .content {
     width: 95%;
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .nav-sm {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav-sm {
+    font-size: 110%;
   }
 }
 
@@ -152,5 +167,18 @@ label {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .sidebar {
     font-size: 110%;
+  }
+
+  .nav-sm {
+    display: none;
+  }
+
+  header.nav-item {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  header.nav-item {
+    white-space: nowrap;
   }
 }
