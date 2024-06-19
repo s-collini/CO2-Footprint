@@ -10,7 +10,7 @@ body {
   height: 100%;
 }
 
-/* === Stile für Schriftarten -farben, etc. === 
+/* === Stile für Schriftarten,  -farben, etc. === 
 in Klassen und IDs*/
 
 #title {
@@ -36,13 +36,15 @@ in Klassen und IDs*/
 /* === Stile fürs Layout === */
 
 /* Header*/
+
 header {
   background-color: lightgrey;
-  height: auto;
   width: 100%;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+
+.nav-item {
+  padding: 8% 0;
 }
 
 .content {
@@ -78,7 +80,7 @@ footer {
 }
 
 section {
-  margin-top: 5%;
+  margin-top: 3%;
 }
 
 /* === Komponenten-Layout === */
@@ -86,24 +88,37 @@ section {
 /*Pseudoklasse hover und visited für Links*/
 
 #header-img {
-  display: flex;
+  position: absolute;
   justify-content: flex-start;
-  align-items: center;
-  max-width: 26%;
-  height: auto;
+  max-height: auto;
+  max-width: 13%;
 }
 
-.links ul,
+form input[type="text"] {
+  padding: 1%;
+  border: none;
+}
+
+.header_links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header_links ul,
+.footer_links ul,
 .sidebar ul {
   list-style-type: none;
 }
 
-.links ul {
+.header_links ul,
+.footer_links ul {
   align-items: center;
 }
 
-.links a,
-.links form,
+.header_links a,
+.header_links form,
+.footer_links a,
 .nav-sm a {
   margin-right: 16px;
   color: olivedrab;
@@ -115,7 +130,8 @@ section {
   text-decoration: none;
 }
 
-.links a:hover,
+.header_links a:hover,
+.footer_links a:hover,
 .sidebar a:hover,
 .th:hover,
 .nav-sm a:hover {
@@ -131,10 +147,6 @@ label {
   margin-left: 16px;
 }
 
-.nav-sm {
-  display: none;
-}
-
 /* === Media Queries === */
 /* für Smartphones*/
 @media screen and (max-width: 767px) {
@@ -146,20 +158,21 @@ label {
   }
 
   .content {
-    width: 95%;
+    width: 92%;
   }
 
-  .nav-item {
+  .nav-item a,
+  .nav-item form {
     display: none;
   }
 
   .nav-sm {
-    display: flex;
-    justify-content: flex-end;
+    display: inline;
+    font-size: 105%;
   }
 
-  .nav-sm {
-    font-size: 110%;
+  .nav-sm li {
+    padding: 3% 0;
   }
 }
 
@@ -172,13 +185,10 @@ label {
   .nav-sm {
     display: none;
   }
+}
 
-  header.nav-item {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-
-  header.nav-item {
-    white-space: nowrap;
+@media screen and (min-width: 1024px) {
+  .nav-sm {
+    display: none;
   }
 }

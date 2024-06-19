@@ -33,6 +33,7 @@ const App = () => {
       <h3>
         CO<sub>2</sub>-Emissionstabelle
       </h3>
+
       <label htmlFor="filterLand">Filtern nach Land:</label>
       <input
         type="text"
@@ -49,6 +50,7 @@ const App = () => {
         onChange={handleFilterUnternehmen}
         placeholder="Unternehmen"
       />
+      <p></p>
       <DataTable data={filterData} />
     </div>
   );
