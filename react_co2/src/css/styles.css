@@ -1,16 +1,4 @@
-/* === Zurücksetzen von grundlegenden Stilen=== */
-html {
-  height: 100%;
-  display: flex;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-/* === Stile für Schriftarten,  -farben, etc. === 
+/* ===== Stile für Schriftarten,  -farben, etc. ===== 
 in Klassen und IDs*/
 
 #title {
@@ -33,18 +21,20 @@ in Klassen und IDs*/
   font-size: 110%;
 }
 
-/* === Stile fürs Layout === */
+/* ===== Stile fürs Layout ===== */
 
 /* Header*/
 
 header {
   background-color: lightgrey;
   width: 100%;
+  padding-bottom: 5% 0;
   justify-content: space-between;
 }
 
-.nav-item {
-  padding: 8% 0;
+.header_links {
+  display: inline;
+  align-items: center;
 }
 
 .content {
@@ -72,54 +62,44 @@ header {
 /*Footer*/
 footer {
   background-color: lightgrey;
-  height: 5%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1% 0;
 }
 
 section {
   margin-top: 3%;
 }
 
-/* === Komponenten-Layout === */
+/* ===== Komponenten-Layout ===== */
 
 /*Pseudoklasse hover und visited für Links*/
-
-#header-img {
-  position: absolute;
-  justify-content: flex-start;
-  max-height: auto;
-  max-width: 13%;
-}
 
 form input[type="text"] {
   padding: 1%;
   border: none;
 }
 
-.header_links {
+#header_img {
+  max-width: 100px;
+  height: 100px;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: flex-start;
 }
 
 .header_links ul,
 .footer_links ul,
 .sidebar ul {
   list-style-type: none;
-}
-
-.header_links ul,
-.footer_links ul {
   align-items: center;
 }
 
 .header_links a,
 .header_links form,
 .footer_links a,
-.nav-sm a {
+#nav-sm a {
   margin-right: 16px;
   color: olivedrab;
   text-decoration: none;
@@ -134,7 +114,7 @@ form input[type="text"] {
 .footer_links a:hover,
 .sidebar a:hover,
 .th:hover,
-.nav-sm a:hover {
+#nav-sm a:hover {
   color: green;
 }
 
@@ -147,7 +127,11 @@ label {
   margin-left: 16px;
 }
 
-/* === Media Queries === */
+#nav-sm {
+  display: none;
+}
+
+/* ===== Media Queries ===== */
 /* für Smartphones*/
 @media screen and (max-width: 767px) {
   .sidebar {
@@ -166,13 +150,9 @@ label {
     display: none;
   }
 
-  .nav-sm {
+  #nav-sm {
     display: inline;
     font-size: 105%;
-  }
-
-  .nav-sm li {
-    padding: 3% 0;
   }
 }
 
@@ -182,13 +162,7 @@ label {
     font-size: 110%;
   }
 
-  .nav-sm {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .nav-sm {
+  #nav-sm {
     display: none;
   }
 }
