@@ -34,21 +34,21 @@ const App = () => {
         CO<sub>2</sub>-Emissionstabelle
       </h3>
 
-      <label htmlFor="filterLand">Filtern nach Land:</label>
+      <label htmlFor="filterLand">Filtern:</label>
       <input
         type="text"
         id="filterLand"
         value={filterLand}
         onChange={handleFilterLand}
-        placeholder="Land"
+        placeholder="nach Land"
       />
-      <label htmlFor="filterUnternehmen"> Filtern nach Unternehmen:</label>
+      <label htmlFor="filterUnternehmen"></label>
       <input
         type="text"
         id="filterUnternehmen"
         value={filterUnternehmen}
         onChange={handleFilterUnternehmen}
-        placeholder="Unternehmen"
+        placeholder="nach Unternehmen"
       />
       <p></p>
       <DataTable data={filterData} />

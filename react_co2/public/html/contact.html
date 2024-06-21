@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+<!--Dokumentensprache Deutsch mit Schreibweise links nach rechts-->
 <html lang="de" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
+    <!--Einbinden der CSS-Datei für das Design-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="/react-co2/src/js/css/styles-flexbox-mediaqueries.css"
+      href="/react_co2/src/css/styles.css"
     />
 
     <title>ReduceYourFootprint Initiative</title>
@@ -28,17 +30,19 @@
   <!--Header-->
   <body>
     <header>
-      <a href="/react-co2/public/html/index.html">
-        <img
-          id="header-img"
-          src="/react-co2/public/img/CO2_Footprint.jpg"
-          alt="Website-Logo"
-          class="img-fluid"
-        />
-      </a>
-
       <nav>
-        <div class="links">
+        <div class="flex space-between navigation">
+          <a href="../index.html">
+            <img
+              id="header_img"
+              src="../img/CO2_Footprint.jpg"
+              alt="Website-Logo"
+            />
+          </a>
+        </div>
+
+        <div class="header_links">
+          <!--Navigationsleiste in Anlehnung an Bootstrap-->
           <ul class="nav justify-content-end">
             <li class="nav-item">
               <form>
@@ -46,40 +50,64 @@
               </form>
             </li>
             <li class="nav-item">
-              <a href="/react-co2/public/html/news.html"> Aktuelles</a>
+              <a href="./html/news.html"> Aktuelles</a>
             </li>
             <li class="nav-item">
-              <a href="/react-co2/public/html/FAQ.html">FAQ</a>
+              <a href="./html/FAQ.html">FAQ</a>
             </li>
             <li class="nav-item">
-              <a href="/react-co2/public/html/contact.html">Kontakt</a>
+              <a href="./html/contact.html">Kontakt</a>
             </li>
 
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
                 data-bs-toggle="dropdown"
-                href="/react-co2/public/html/index.html"
+                href="./index.html"
                 role="button"
                 aria-expanded="false"
                 >Sprache</a
               >
               <ul class="dropdown-menu">
                 <li>
-                  <a
-                    class="dropdown-item"
-                    href="/react-co2/public/html/index.html"
-                  >
-                    DE</a
-                  >
+                  <a class="dropdown-item" href="./index.html"> DE</a>
                 </li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    href="/react-co2/public/html/ae-index.html"
-                  >
-                    AE</a
-                  >
+                  <a class="dropdown-item" href="./html/ae-index.html"> AE</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div id="nav-sm">
+          <ul class="nav justify-content-end">
+            <li>
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="./index.html"
+                role="button"
+                aria-expanded="false"
+                >Menü</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="./index.html">Aktuelles</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./index.html"> FAQ</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./index.html"> Kontakt</a>
+                </li>
+                <br />
+                <li>
+                  <a class="dropdown-item" href="./index.html"> DE</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="./index.html"> AE</a>
                 </li>
               </ul>
             </li>
@@ -87,6 +115,7 @@
         </div>
       </nav>
     </header>
+
     <p></p>
     <!--Content-->
     <main>
@@ -121,17 +150,13 @@
     <!--Footer-->
     <footer>
       <nav>
-        <div class="links">
+        <div class="footer_links">
           <ul class="nav justify-content-center">
             <li>
-              <a class="nav-item" href="/react-co2/public/html/privacy.html"
-                >Datenschutz</a
-              >
+              <a class="nav-item" href="./privacy.html">Datenschutz</a>
             </li>
             <li>
-              <a class="nav-item" href="/react-co2/public/html/imprint.html"
-                >Impressum</a
-              >
+              <a class="nav-item" href="./imprint.html">Impressum</a>
             </li>
             <li>
               <a class="nav-item" href="https://www.instagram.com/RYF"

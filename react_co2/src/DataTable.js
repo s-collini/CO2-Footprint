@@ -32,8 +32,7 @@ const DataTable = ({ data }) => {
         <thead>
           <tr>
             <th class="th" onClick={() => requestSort("Land")}>
-              {" "}
-              Land{" "}
+              Land
             </th>
             <th class="th" onClick={() => requestSort("Unternehmen")}>
               Unternehmen

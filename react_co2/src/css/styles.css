@@ -1,30 +1,3 @@
-/* ===== Stile für Schriftarten,  -farben, etc. ===== 
-in Klassen und IDs*/
-
-#title {
-  color: olivedrab;
-  font-family: fantasy;
-  text-align: center;
-}
-
-.content h3 {
-  font-weight: lighter;
-}
-
-.sidenote {
-  color: darkgrey;
-  text-align: right;
-  font-size: 90%;
-}
-
-.card-body h5 {
-  font-size: 110%;
-}
-
-/* ===== Stile fürs Layout ===== */
-
-/* Header*/
-
 header {
   background-color: lightgrey;
   width: 100%;
@@ -32,59 +5,14 @@ header {
   justify-content: space-between;
 }
 
-.header_links {
-  display: inline;
-  align-items: center;
-}
-
-.content {
-  width: 75%;
-  float: right;
-  margin-right: 2%;
-}
-
-.mainsection {
-  justify-content: flex-start;
-}
-
-.sidebar {
-  background-color: olivedrab;
-  height: auto;
-  width: 20%;
-  position: fixed;
-  left: 0;
-  float: left;
-  padding-top: 1%;
-  font-weight: lighter;
-  font-size: 130%;
-}
-
-/*Footer*/
-footer {
-  background-color: lightgrey;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1% 0;
-}
-
-section {
-  margin-top: 3%;
-}
-
-/* ===== Komponenten-Layout ===== */
-
-/*Pseudoklasse hover und visited für Links*/
-
 form input[type="text"] {
   padding: 1%;
   border: none;
 }
 
 #header_img {
-  max-width: 100px;
-  height: 100px;
+  max-width: 125px;
+  height: 125px;
   display: flex;
   justify-content: flex-start;
 }
@@ -105,6 +33,60 @@ form input[type="text"] {
   text-decoration: none;
 }
 
+.header_links {
+  display: inline;
+  align-items: center;
+}
+
+#title {
+  color: olivedrab;
+  font-family: fantasy;
+  text-align: center;
+}
+
+.content h3 {
+  font-weight: lighter;
+}
+
+.content {
+  width: 75%;
+  float: right;
+  margin-right: 2%;
+}
+
+.content li {
+  list-style-type: circle;
+}
+
+section {
+  margin-top: 3%;
+}
+
+.mainsection {
+  justify-content: flex-start;
+}
+
+label {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.card-body h5 {
+  font-size: 110%;
+}
+
+.sidebar {
+  background-color: olivedrab;
+  height: auto;
+  width: 20%;
+  position: fixed;
+  left: 0;
+  float: left;
+  padding-top: 1%;
+  font-weight: lighter;
+  font-size: 130%;
+}
+
 .sidebar a {
   color: lightgrey;
   text-decoration: none;
@@ -118,20 +100,27 @@ form input[type="text"] {
   color: green;
 }
 
-.content li {
-  list-style-type: circle;
+.sidenote {
+  color: darkgrey;
+  text-align: right;
+  font-size: 90%;
 }
 
-label {
-  margin-right: 16px;
-  margin-left: 16px;
+footer {
+  background-color: lightgrey;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 0;
 }
 
+/* Navigation mit der ID nav-sm nur fürs Smartphone, standardmäßig ausblenden*/
 #nav-sm {
   display: none;
 }
 
-/* ===== Media Queries ===== */
+/* =============== Media Queries ===============  */
 /* für Smartphones*/
 @media screen and (max-width: 767px) {
   .sidebar {
@@ -142,7 +131,7 @@ label {
   }
 
   .content {
-    width: 92%;
+    width: 90%;
   }
 
   .nav-item a,
@@ -160,9 +149,5 @@ label {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .sidebar {
     font-size: 110%;
-  }
-
-  #nav-sm {
-    display: none;
   }
 }

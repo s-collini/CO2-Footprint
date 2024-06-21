@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+<!--Dokumentensprache Arabisch mit Schreibweise rechts nach links-->
 <html lang="ae" dir="rtl">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
+    <!--Einbinden der CSS-Datei für das Design-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="/react-co2/public/CSS/ae-styles.css"
+      href="/react_co2/src/css/ae-styles.css"
     />
 
     <title>ReduceYourFootprint Initiative</title>
@@ -25,29 +27,90 @@
     ></script>
   </head>
 
-  <!--Header-->
+  <!-----------------------Header--------------------->
   <body>
     <header>
-      <img
-        id="header-img"
-        src="/react-co2/public/img/CO2_Footprint.jpg"
-        alt="Website-Logo"
-        width="150px"
-        height="150px"
-      />
       <nav>
-        <div class="links">
-          <ul>
-            <li>
+        <div class="flex space-between navigation">
+          <a href="./index.html">
+            <img
+              id="header_img"
+              src="./img/CO2_Footprint.jpg"
+              alt="Website-Logo"
+            />
+          </a>
+        </div>
+
+        <div class="header_links">
+          <!--Navigationsleiste in Anlehnung an Bootstrap-->
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
               <form>
                 <input type="text" name="suche" placeholder="Suche" />
               </form>
             </li>
-            <li><a href="contact.html">الاتصال</a></li>
-            <li><a href="FAQ.html">الأسئلة المتداولة</a></li>
-            <li><a href="news.html"> مستجدات</a></li>
-            <li><a href="index.html"> DE</a></li>
-            <li><a href="ae-index.html"> AE</a></li>
+            <li class="nav-item">
+              <a> Aktuelles</a>
+            </li>
+            <li class="nav-item">
+              <a>FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a>Kontakt</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="./index.html"
+                role="button"
+                aria-expanded="false"
+                >Sprache</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="../index.html"> DE</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="./ae-index.html"> AE</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <div id="nav-sm">
+          <ul class="nav justify-content-end">
+            <li>
+              <a
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="./index.html"
+                role="button"
+                aria-expanded="false"
+                >Menü</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item">Aktuelles</a>
+                </li>
+                <li>
+                  <a class="dropdown-item"> FAQ</a>
+                </li>
+                <li>
+                  <a class="dropdown-item"> Kontakt</a>
+                </li>
+                <br />
+                <li>
+                  <a class="dropdown-item" href="../index.html"> DE</a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" href="./ae-index.html"> AE</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </nav>
@@ -79,60 +142,55 @@
           <section>
             <h2 id="facts">الحقائق</h2>
             <p></p>
-            <h5>CO2-Fußabdruck pro Kopf</h5>
+            <h5>بصمة ثاني أكسيد الكربون للفرد</h5>
             <ul>
-              Weltweiter Durchschnitt: Der durchschnittliche CO2-Fußabdruck pro
-              Person liegt weltweit bei etwa 4,8 Tonnen CO2e pro Jahr.
+              يصدر الشخص في جميع أنحاء العالم حوالي 4.8 طن من ثاني أكسيد الكربون
+              كل عام.
             </ul>
             <ul>
-              Industrieländer: In den USA beträgt der durchschnittliche
-              CO2-Fußabdruck pro Person etwa 16,5 Tonnen CO2e pro Jahr, während
-              er in der EU bei etwa 7,2 Tonnen CO2e liegt.
+              لدول المتقدمة: في الولايات المتحدة الأمريكية، المتوسط ​​هو وتبلغ
+              البصمة الكربونية للشخص الواحد نحو 16.5 طن من مكافئ ثاني أكسيد
+              الكربون سنوياً، بينما ويبلغ حوالي 7.2 طن من ثاني أكسيد الكربون في
+              الاتحاد
             </ul>
             <ul>
-              Entwicklungsländer: In Indien liegt der CO2-Fußabdruck pro Person
-              bei etwa 1,9 Tonnen CO2e pro Jahr.
-            </ul>
-
-            <h5>Quellen der CO2-Emissionen</h5>
-            <ul>
-              Energieproduktion: Verantwortlich für etwa 73% der globalen
-              Treibhausgasemissionen. Fossile Brennstoffe (Kohle, Öl, Gas) sind
-              die Hauptquelle.
-            </ul>
-            <ul>
-              Transport: Verursacht etwa 14% der globalen CO2-Emissionen.
-              Straßenverkehr
-            </ul>
-            <ul>
-              Industrie: Verursacht etwa 21% der globalen CO2-Emissionen,
-              hauptsächlich durch die Herstellung von Stahl, Zement und
-              Chemikalien.
-            </ul>
-            <ul>
-              Landwirtschaft und Ernährung: Verursachen etwa 19% der globalen
-              CO2-Emissionen. Rinderhaltung und Reisanbau sind bedeutende
-              Quellen.
-            </ul>
-            <ul>
-              Abfall und Abwasser: Verantwortlich für etwa 3% der globalen
-              CO2-Emissionen.
+              بمعدل 1.9 طن من ثاني أكسيد الكربون سنويًا. البلدان النامية: في
+              الهند، تكون البصمة الكربونية لكل شخص
             </ul>
 
-            <h5>Auswirkungen auf das Klima</h5>
+            <h5>صادر انبعاثات ثاني أكسيد الكربون</h5>
             <ul>
-              Erderwärmung: Seit Beginn der industriellen Revolution ist die
-              globale Durchschnittstemperatur um etwa 1,2°C gestiegen.
+              نتاج الطاقة: مسؤول عن حوالي 73% من الإنتاج العالمي انبعاثات غازات
+              الاحتباس الحراري. الوقود الأحفوري (الفحم والنفط والغاز).
             </ul>
             <ul>
-              Meeresspiegelanstieg: Der Meeresspiegel ist seit 1900 um etwa 20
-              cm gestiegen, und es wird erwartet, dass er bis 2100 um weitere
-              26-82 cm steigt.
+              قل: يسبب حوالي 14% من انبعاثات ثاني أكسيد الكربون العالمية.
             </ul>
             <ul>
-              Extreme Wetterereignisse: Die Häufigkeit und Intensität von
-              Hitzewellen, Dürren, Überschwemmungen und Hurrikanen hat
-              zugenommen.
+              لصناعة: تسبب حوالي 21% من انبعاثات ثاني أكسيد الكربون العالمية،
+              بشكل رئيسي من خلال إنتاج الصلب والأسمنت و
+            </ul>
+            <ul>
+              لزراعة والغذاء: تساهم بحوالي 19% من الإنتاج العالمي انبعاثات CO2.
+              تربية الماشية وزراعة الأرز مهمة
+            </ul>
+            <ul>
+              نفايات ومياهCO2 الصرف الصحي: مسؤولة عن حوالي 3% من النفايات
+              العالمية
+            </ul>
+
+            <h5>التأثير على المناخ</h5>
+            <ul>
+              لاحتباس الحراري: منذ بداية الثورة الصناعية ارتفع متوسط ​​درجة
+              الحرارة العالمية بنحو 1.2 درجة
+            </ul>
+            <ul>
+              رتفاع مستوى سطح البحر: ارتفع مستوى سطح البحر بنحو 20 درجة منذ عام
+              1900 سم ومن المتوقع أن يرتفع بشكل أكبر بحلول عام 2100
+            </ul>
+            <ul>
+              الأحداث الجوية المتطرفة: تواتر وشدة موجات الحر والجفاف والفيضانات
+              والأعاصير
             </ul>
           </section>
 
@@ -160,7 +218,7 @@
               <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-xs-1 g-4">
                 <div class="col">
                   <div class="card">
-                    <img src="/react-co2/public/img/mobility.jpg" />
+                    <img src="../img/mobility.jpg" />
                     <div class="card-body">
                       <h5 class="card-title">التنقل</h5>
                     </div>
@@ -168,7 +226,7 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="/react-co2/public/img/energy.jpg" />
+                    <img src="../img/energy.jpg" />
                     <div class="card-body">
                       <h5 class="card-title">طاقة</h5>
                     </div>
@@ -176,7 +234,7 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="/react-co2/public/img/consumption.jpg" />
+                    <img src="../img/consumption.jpg" />
                     <div class="card-body">
                       <h5 class="card-title">استهلاك</h5>
                     </div>
@@ -184,7 +242,7 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="/react-co2/public/img/projects.jpg" />
+                    <img src="../img/projects.jpg" />
                     <div class="card-body">
                       <h5 class="card-title">مشاريعنا</h5>
                     </div>
@@ -204,13 +262,13 @@
               </p>
               <p>
                 صاحب الحساب: فريدريك هارتمان <br />
-                IBAN: DE89 3704 0044 0532 0130 00 <br />
-                BIC: COBADEFFXXX <br />
+                رقم الحساب المصرفي الدولي: DE89 3704 0044 0532 0130 00 <br />
+                BIC: COBADEFFXXX<br />
                 الغرض: "التبرع بحماية المناخ"
               </p>
             </section>
 
-            <div id="sidenote">
+            <div class="sidenote">
               <small
                 >تم تحرير النص الكامل لصفحة الويب بواسطة ChatGPT انشاء</small
               >
@@ -220,17 +278,25 @@
       </div>
     </main>
 
-    <!--Footer-->
+    <!--------------------------Footer---------------------->
     <footer>
       <nav>
-        <div class="links">
-          <ul>
-            <li><a href="privacy.html">الخصوصيه</a></li>
-            <li><a href="imprint.html">بصمه</a></li>
-            <li><a href="https://www.instagram.com/RYF">انستغرام</a></li>
+        <div class="footer_links">
+          <!--Navigationsleiste in Anlehnung an Bootstrap-->
+          <ul class="nav justify-content-center">
+            <li>
+              <a class="footer_nav-item">حماية البيانات</a>
+            </li>
+            <li>
+              <a class="footer_nav-item">انستغرام</a>
+            </li>
+            <li>
+              <a class="footer_nav-item">انستام</a>
+            </li>
           </ul>
         </div>
       </nav>
     </footer>
+    <script src="../src/index.js"></script>
   </body>
 </html>

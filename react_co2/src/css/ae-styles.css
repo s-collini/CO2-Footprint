@@ -1,25 +1,41 @@
-/* === Zurücksetzen von grundlegenden Stilen=== */
-html {
-  height: 100%;
+header {
+  background-color: lightgrey;
+  width: 100%;
+  padding-bottom: 5% 0;
+  justify-content: space-between;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+form input[type="text"] {
+  padding: 1%;
+  border: none;
 }
 
-/* === Stile für Schriftarten -farben, etc. === 
-  in Klassen und IDs*/
+#header_img {
+  max-width: 125px;
+  height: 125px;
+  display: flex;
+  justify-content: flex-start;
+}
 
-.sidebar {
-  background-color: olivedrab;
-  height: auto;
-  width: 20%;
-  position: fixed;
-  left: 0;
-  overflow-x: hidden;
-  float: right;
+.header_links ul,
+.footer_links ul,
+.sidebar ul {
+  list-style-type: none;
+  align-items: center;
+}
+
+.header_links a,
+.header_links form,
+.footer_links a,
+#nav-sm a {
+  margin-right: 16px;
+  color: olivedrab;
+  text-decoration: none;
+}
+
+.header_links {
+  display: inline;
+  align-items: center;
 }
 
 #title {
@@ -28,78 +44,47 @@ body {
   text-align: center;
 }
 
-#sidenote {
-  color: darkgrey;
-  float: right;
-}
-
-/* === Stile fürs Layout === */
-
-/* Header*/
-header {
-  background-color: darkgrey;
-  height: 15%;
-  width: 100%;
-  display: flex;
+.content h3 {
+  font-weight: lighter;
 }
 
 .content {
   width: 75%;
-  float: right;
-  margin-right: 2%;
+  float: left;
+  margin-left: 2%;
+}
+
+.content li {
+  list-style-type: circle;
+}
+
+section {
+  margin-top: 3%;
 }
 
 .mainsection {
   justify-content: flex-start;
-  text-align: left;
 }
 
-.img {
-}
-
-/*Footer*/
-footer {
-  background-color: darkgrey;
-  height: 5%;
-  width: 100%;
-  display: flex;
-}
-
-/* === Komponenten-Layout === */
-
-/*Pseudoklasse hover und visited für Links*/
-
-#header-img {
-  float: right;
-}
-
-.links ul,
-.sidebar ul {
-  list-style-type: none;
-}
-
-header .links form,
-.links li {
-  display: inline-flex;
-  float: right;
-}
-
-header .links li {
-  justify-content: end;
-  align-items: last baseline;
-}
-
-footer .links li {
-  justify-content: center;
-  align-items: center;
-}
-
-.links a,
-.links form {
-  font-size: medium;
+label {
   margin-right: 16px;
-  color: olivedrab;
-  text-decoration: none;
+  margin-left: 16px;
+}
+
+.card-body h5 {
+  font-size: 110%;
+}
+
+.sidebar {
+  background-color: olivedrab;
+  height: auto;
+  width: 20%;
+  position: fixed;
+  right: 0;
+  float: right;
+  padding-top: 1%;
+  font-weight: lighter;
+  font-size: 130%;
 }
 
 .sidebar a {
@@ -107,17 +92,62 @@ footer .links li {
   text-decoration: none;
 }
 
-.links a:hover,
-.sidebar a:hover {
+.header_links a:hover,
+.footer_links a:hover,
+.sidebar a:hover,
+.th:hover,
+#nav-sm a:hover {
   color: green;
 }
 
-/* === Media Queries === */
-@media screen and (min-width: 768px) {
+.sidenote {
+  color: darkgrey;
+  text-align: right;
+  font-size: 90%;
+}
+
+footer {
+  background-color: lightgrey;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 0;
+}
+
+/* Navigation mit der ID nav-sm nur fürs Smartphone, standardmäßig ausblenden*/
+#nav-sm {
+  display: none;
+}
+
+/* =============== Media Queries ===============  */
+/* für Smartphones*/
+@media screen and (max-width: 767px) {
   .sidebar {
-    padding-top: 15px;
+    display: none;
   }
-  .sidebar a {
-    font-size: 18px;
+  .sidenote {
+    font-size: 70%;
+  }
+
+  .content {
+    width: 90%;
+  }
+
+  .nav-item a,
+  .nav-item form {
+    display: none;
+  }
+
+  #nav-sm {
+    display: inline;
+    font-size: 105%;
+  }
+}
+
+/* für Tablets*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .sidebar {
+    font-size: 110%;
   }
 }
