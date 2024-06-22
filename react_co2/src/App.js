@@ -14,12 +14,47 @@ const App = () => {
       .catch((error) => console.error("Fehler beim Laden der Daten", error));
   }, []);
 
+  // Event-Handler bereinigt Filter Land
   const handleFilterLand = (event) => {
-    setFilterLand(event.target.value);
-  };
+    const value = event.target.value;
 
+    // Überprüft auf spezifische Sonderzeichen
+    if (/[!?$]/.test(value)) {
+      alert(
+        "Ungültige Eingabe: Das Suchfeld darf keine Sonderzeichen wie !, ? enthalten."
+      );
+    }
+
+    // Säubert des Werts mit DOMPurify
+    const sanitizedValue = window.DOMPurify.sanitize(value);
+
+    // Überprüft, ob DOMPurify Änderungen vorgenommen hat
+    if (sanitizedValue !== value) {
+      alert("Ungültige Eingabe: Das Suchfeld darf keine HTML-Tags enthalten.");
+    }
+
+    // Setzen des gesäuberten Werts
+    setFilterLand(sanitizedValue);
+  };
+  // Event-Handler bereinigt Filter Unternehmen
   const handleFilterUnternehmen = (event) => {
-    setFilterUnternehmen(event.target.value);
+    const value = event.target.value;
+
+    // Überprüft auf spezifische Sonderzeichen
+    if (/[!?$]/.test(value)) {
+      alert(
+        "Ungültige Eingabe: Das Suchfeld darf keine Sonderzeichen wie !, ? enthalten."
+      );
+    }
+
+    // Säubert des Werts mit DOMPurify
+    const sanitizedValue = window.DOMPurify.sanitize(value);
+
+    // Überprüft, ob DOMPurify Änderungen vorgenommen hat
+    if (sanitizedValue !== value) {
+      alert("Ungültige Eingabe: Das Suchfeld darf keine HTML-Tags enthalten.");
+    }
+    setFilterUnternehmen(sanitizedValue);
   };
 
   const filterData = data.filter(

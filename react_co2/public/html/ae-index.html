@@ -30,50 +30,43 @@
   <!-----------------------Header--------------------->
   <body>
     <header>
-      <nav>
-        <div class="flex space-between navigation">
+      <nav class="navigation">
+        <div class="nav-container">
           <a href="./index.html">
             <img
               id="header_img"
-              src="./img/CO2_Footprint.jpg"
+              src="../img/CO2_Footprint.jpg"
               alt="Website-Logo"
             />
           </a>
-        </div>
-
-        <div class="header_links">
-          <!--Navigationsleiste in Anlehnung an Bootstrap-->
-          <ul class="nav justify-content-end">
-            <li class="nav-item">
+          <ul class="nav-links">
+            <li>
               <form>
                 <input type="text" name="suche" placeholder="Suche" />
               </form>
             </li>
-            <li class="nav-item">
-              <a> Aktuelles</a>
+            <li>
+              <a href="./html/news.html">Aktuelles</a>
             </li>
-            <li class="nav-item">
-              <a>FAQ</a>
+            <li>
+              <a href="./html/FAQ.html">FAQ</a>
             </li>
-            <li class="nav-item">
-              <a>Kontakt</a>
+            <li>
+              <a href="./html/contact.html">Kontakt</a>
             </li>
-
-            <li class="nav-item dropdown">
+            <li>
               <a
-                class="nav-link dropdown-toggle"
+                class="dropdown-toggle"
                 data-bs-toggle="dropdown"
-                href="./index.html"
+                href="#"
                 role="button"
                 aria-expanded="false"
                 >Sprache</a
               >
               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./index.html">DE</a></li>
                 <li>
-                  <a class="dropdown-item" href="../index.html"> DE</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./ae-index.html"> AE</a>
+                  <a class="dropdown-item" href="./html/ae-index.html">AE</a>
                 </li>
               </ul>
             </li>
@@ -81,36 +74,27 @@
         </div>
 
         <div id="nav-sm">
-          <ul class="nav justify-content-end">
-            <li>
-              <a
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="./index.html"
-                role="button"
-                aria-expanded="false"
-                >Menü</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item">Aktuelles</a>
-                </li>
-                <li>
-                  <a class="dropdown-item"> FAQ</a>
-                </li>
-                <li>
-                  <a class="dropdown-item"> Kontakt</a>
-                </li>
-                <br />
-                <li>
-                  <a class="dropdown-item" href="../index.html"> DE</a>
-                </li>
-
-                <li>
-                  <a class="dropdown-item" href="./ae-index.html"> AE</a>
-                </li>
-              </ul>
-            </li>
+          <a href="./index.html">
+            <img
+              id="header_img_sm"
+              src="../img/CO2_Footprint.jpg"
+              alt="Website-Logo"
+            />
+          </a>
+          <a
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-expanded="false"
+            >Menü</a
+          >
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./index.html">Aktuelles</a></li>
+            <li><a class="dropdown-item" href="./index.html">FAQ</a></li>
+            <li><a class="dropdown-item" href="./index.html">Kontakt</a></li>
+            <li><a class="dropdown-item" href="./index.html">DE</a></li>
+            <li><a class="dropdown-item" href="./index.html">AE</a></li>
           </ul>
         </div>
       </nav>

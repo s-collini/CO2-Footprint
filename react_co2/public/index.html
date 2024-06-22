@@ -21,13 +21,16 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- DOMPurify per CDN einbinden -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.5/dist/purify.min.js"></script>
   </head>
 
   <!-----------------------Header--------------------->
   <body>
     <header>
-      <nav>
-        <div class="flex space-between navigation">
+      <nav class="navigation">
+        <div class="nav-container">
           <a href="./index.html">
             <img
               id="header_img"
@@ -35,41 +38,58 @@
               alt="Website-Logo"
             />
           </a>
-        </div>
-
-        <div class="header_links">
-          <!--Navigationsleiste in Anlehnung an Bootstrap-->
-          <ul class="nav justify-content-end">
-            <li class="nav-item">
-              <form>
-                <input type="text" name="suche" placeholder="Suche" />
+          <ul class="nav-links">
+            <li>
+              <form onsubmit="handleSearch(event)">
+                <input
+                  id="searchInput"
+                  type="text"
+                  name="suche"
+                  placeholder="Suche"
+                />
               </form>
+              <script>
+                function handleSearch() {
+                  const search = document.getElementById("searchInput").value;
+
+                  if (/[!?$]/.test(search)) {
+                    alert(
+                      "Ungültige Eingabe: Das Suchfeld darf keine Sonderzeichen wie !, ? enthalten."
+                    );
+                  }
+
+                  const safeSearch = window.DOMPurify.sanitize(search);
+
+                  if (safeSearch !== search) {
+                    alert(
+                      "Ungültige Eingabe: Das Suchfeld darf keine HTML-Tags enthalten."
+                    );
+                  }
+                }
+              </script>
             </li>
-            <li class="nav-item">
-              <a href="./html/news.html"> Aktuelles</a>
+            <li>
+              <a href="./html/news.html">Aktuelles</a>
             </li>
-            <li class="nav-item">
+            <li>
               <a href="./html/FAQ.html">FAQ</a>
             </li>
-            <li class="nav-item">
+            <li>
               <a href="./html/contact.html">Kontakt</a>
             </li>
-
-            <li class="nav-item dropdown">
+            <li>
               <a
-                class="nav-link dropdown-toggle"
+                class="dropdown-toggle"
                 data-bs-toggle="dropdown"
-                href="./index.html"
+                href="#"
                 role="button"
                 aria-expanded="false"
                 >Sprache</a
               >
               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./index.html">DE</a></li>
                 <li>
-                  <a class="dropdown-item" href="./index.html"> DE</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./html/ae-index.html"> AE</a>
+                  <a class="dropdown-item" href="./html/ae-index.html">AE</a>
                 </li>
               </ul>
             </li>
@@ -77,36 +97,27 @@
         </div>
 
         <div id="nav-sm">
-          <ul class="nav justify-content-end">
-            <li>
-              <a
-                class="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown"
-                href="./index.html"
-                role="button"
-                aria-expanded="false"
-                >Menü</a
-              >
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="./index.html">Aktuelles</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./index.html"> FAQ</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="./index.html"> Kontakt</a>
-                </li>
-                <br />
-                <li>
-                  <a class="dropdown-item" href="./index.html"> DE</a>
-                </li>
-
-                <li>
-                  <a class="dropdown-item" href="./index.html"> AE</a>
-                </li>
-              </ul>
-            </li>
+          <a href="./index.html">
+            <img
+              id="header_img_sm"
+              src="./img/CO2_Footprint.jpg"
+              alt="Website-Logo"
+            />
+          </a>
+          <a
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-expanded="false"
+            >Menü</a
+          >
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="./index.html">Aktuelles</a></li>
+            <li><a class="dropdown-item" href="./index.html">FAQ</a></li>
+            <li><a class="dropdown-item" href="./index.html">Kontakt</a></li>
+            <li><a class="dropdown-item" href="./index.html">DE</a></li>
+            <li><a class="dropdown-item" href="./index.html">AE</a></li>
           </ul>
         </div>
       </nav>
@@ -309,24 +320,17 @@
 
     <!--------------------------Footer---------------------->
     <footer>
-      <nav>
-        <div class="footer_links">
-          <!--Navigationsleiste in Anlehnung an Bootstrap-->
-          <ul class="nav justify-content-center">
+      <nav class="navigation">
+        <div class="nav-container">
+          <ul class="nav-links">
             <li>
-              <a class="footer_nav-item" href="./html/privacy.html"
-                >Datenschutz</a
-              >
+              <a href="./html/privacy.html">Datenschutz</a>
             </li>
             <li>
-              <a class="footer_nav-item" href="./html/imprint.html"
-                >Impressum</a
-              >
+              <a href="./html/imprint.html">Impressum</a>
             </li>
             <li>
-              <a class="footer_nav-item" href="https://www.instagram.com/RYF"
-                >Instagram</a
-              >
+              <a href="https://www.instagram.com/RYF">Instagram</a>
             </li>
           </ul>
         </div>
