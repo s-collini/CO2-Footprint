@@ -9,46 +9,30 @@ nav .nav-container {
   align-items: center;
 }
 
-nav .footer_nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 #header_img {
   height: 100%;
   max-height: 120px;
   width: auto;
 }
 
-.nav-links,
-.footer_nav-links {
+.nav-links {
   display: flex;
   list-style: none;
   align-items: center;
   margin-right: 2%;
 }
 
-.nav-links li,
-.footer_nav-links li {
-  margin: 0 5px;
+.nav-links li {
+  margin: 0 10px;
 }
 
 form input[type="text"] {
-  padding: 0.5rem;
+  padding: 0.2rem;
   border: none;
 }
 
-/* Navigation mit der ID nav-sm nur fürs Smartphone, standardmäßig ausblenden*/
-#nav-sm {
-  display: none;
-}
-
 .nav-container a,
-.nav-container form,
-.footer_nav-links a,
 #nav-sm a {
-  margin-right: 16px;
   color: olivedrab;
   text-decoration: none;
 }
@@ -78,7 +62,7 @@ section {
 }
 
 .mainsection {
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 
 label {
@@ -97,9 +81,16 @@ label {
   position: fixed;
   right: 0;
   float: right;
-  padding-top: 1%;
+  padding-top: 0.5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
   font-weight: lighter;
-  font-size: 130%;
+  font-size: 120%;
 }
 
 .sidebar a {
@@ -107,12 +98,7 @@ label {
   text-decoration: none;
 }
 
-.sidebar ul {
-  list-style: none;
-}
-
 .nav-container a:hover,
-.footer_nav-links a:hover,
 .sidebar a:hover,
 .th:hover,
 #nav-sm a:hover {
@@ -121,7 +107,7 @@ label {
 
 .sidenote {
   color: darkgrey;
-  text-align: right;
+  text-align: left;
   font-size: 90%;
 }
 
@@ -129,6 +115,16 @@ footer {
   background-color: lightgrey;
   width: 100%;
   display: flex;
+  justify-content: center;
+}
+
+footer li {
+  padding-top: 0.9rem;
+}
+
+/* Navigation mit der ID nav-sm nur fürs Smartphone, standardmäßig ausblenden*/
+#nav-sm {
+  display: none;
 }
 
 /* =============== Media Queries ===============  */
@@ -145,7 +141,7 @@ footer {
     width: 90%;
   }
 
-  nav .nav-container {
+  header nav .nav-container {
     display: none;
   }
 
@@ -153,24 +149,24 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 3%;
+    margin-left: 3%;
     font-size: 105%;
   }
   #header_img_sm {
     height: 100%;
-    max-height: 60px;
+    max-height: 80px;
     width: auto;
   }
 
-  body {
-    background: var(--primary);
-    color: var(--white);
+  footer li {
+    padding-top: 0.7rem;
+    font-size: 90%;
   }
 }
 
 /* für Tablets*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .sidebar {
+  .sidebar li {
     font-size: 110%;
   }
 }

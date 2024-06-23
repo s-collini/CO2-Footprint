@@ -1,12 +1,14 @@
 <!DOCTYPE html>
+<!--Dokumentensprache Deutsch mit Schreibweise links nach rechts-->
 <html lang="de" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
+    <!--Einbinden der CSS-Datei für das Design-->
     <link
       rel="stylesheet"
       type="text/css"
-      href="/react-co2/src/js/css/styles-flexbox-mediaqueries.css"
+      href="/react_co2/src/css/styles.css"
     />
 
     <title>ReduceYourFootprint Initiative</title>
@@ -23,72 +25,113 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- DOMPurify per CDN einbinden -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.5/dist/purify.min.js"></script>
   </head>
 
-  <!--Header-->
+  <!-----------------------Header--------------------->
   <body>
     <header>
-      <a href="/react-co2/public/html/index.html">
-        <img
-          id="header-img"
-          src="/react-co2/public/img/CO2_Footprint.jpg"
-          alt="Website-Logo"
-          class="img-fluid"
-        />
-      </a>
-
-      <nav>
-        <div class="links">
-          <ul class="nav justify-content-end">
-            <li class="nav-item">
-              <form>
-                <input type="text" name="suche" placeholder="Suche" />
+      <nav class="navigation">
+        <div class="nav-container">
+          <a href="../index.html">
+            <img
+              id="header_img"
+              src="../img/CO2_Footprint.jpg"
+              alt="Website-Logo"
+            />
+          </a>
+          <ul class="nav-links">
+            <li>
+              <form onsubmit="handleSearch(event)">
+                <input
+                  id="searchInput"
+                  type="text"
+                  name="suche"
+                  placeholder="Suche"
+                />
               </form>
-            </li>
-            <li class="nav-item">
-              <a href="/react-co2/public/html/news.html"> Aktuelles</a>
-            </li>
-            <li class="nav-item">
-              <a href="/react-co2/public/html/FAQ.html">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a href="/react-co2/public/html/contact.html">Kontakt</a>
-            </li>
+              <script>
+                function handleSearch() {
+                  const search = document.getElementById("searchInput").value;
 
-            <li class="nav-item dropdown">
+                  if (/[!?$]/.test(search)) {
+                    alert(
+                      "Ungültige Eingabe: Das Suchfeld darf keine Sonderzeichen wie !, ? enthalten."
+                    );
+                  }
+
+                  const safeSearch = window.DOMPurify.sanitize(search);
+
+                  if (safeSearch !== search) {
+                    alert(
+                      "Ungültige Eingabe: Das Suchfeld darf keine HTML-Tags enthalten."
+                    );
+                  }
+                }
+              </script>
+            </li>
+            <li>
+              <a href="./news.html">Aktuelles</a>
+            </li>
+            <li>
+              <a href="./FAQ.html">FAQ</a>
+            </li>
+            <li>
+              <a href="./contact.html">Kontakt</a>
+            </li>
+            <li>
               <a
-                class="nav-link dropdown-toggle"
+                class="dropdown-toggle"
                 data-bs-toggle="dropdown"
-                href="/react-co2/public/html/index.html"
+                href="#"
                 role="button"
                 aria-expanded="false"
                 >Sprache</a
               >
               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="../index.html">DE</a></li>
                 <li>
-                  <a
-                    class="dropdown-item"
-                    href="/react-co2/public/html/index.html"
-                  >
-                    DE</a
-                  >
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="/react-co2/public/html/ae-index.html"
-                  >
-                    AE</a
-                  >
+                  <a class="dropdown-item" href="./ae-index.html">AE</a>
                 </li>
               </ul>
             </li>
           </ul>
         </div>
+
+        <div id="nav-sm">
+          <a href="../index.html">
+            <img
+              id="header_img_sm"
+              src="../img/CO2_Footprint.jpg"
+              alt="Website-Logo"
+            />
+          </a>
+          <a
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            href="#"
+            role="button"
+            aria-expanded="false"
+            >Menü</a
+          >
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="./news.html">Aktuelles</a>
+            </li>
+            <li><a class="dropdown-item" href="./faq.html">FAQ</a></li>
+            <li>
+              <a class="dropdown-item" href="./contact.html">Kontakt</a>
+            </li>
+            <li><a class="dropdown-item" href="../index.html">DE</a></li>
+            <li><a class="dropdown-item" href="./ae-index.html">AE</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
     <p></p>
-    <!--Content-->
+    <!--------------------------Content-------------------------->
     <main>
       <div class="content">
         <div class="mainsection">
@@ -180,29 +223,24 @@
       </div>
     </main>
 
-    <!--Footer-->
+    <!--------------------------Footer---------------------->
     <footer>
-      <nav>
-        <div class="links">
-          <ul class="nav justify-content-center">
+      <nav class="navigation">
+        <div class="nav-container">
+          <ul class="nav-links">
             <li>
-              <a class="nav-item" href="/react-co2/public/html/privacy.html"
-                >Datenschutz</a
-              >
+              <a href="./privacy.html">Datenschutz</a>
             </li>
             <li>
-              <a class="nav-item" href="/react-co2/public/html/imprint.html"
-                >Impressum</a
-              >
+              <a href="./imprint.html">Impressum</a>
             </li>
             <li>
-              <a class="nav-item" href="https://www.instagram.com/RYF"
-                >Instagram</a
-              >
+              <a href="https://www.instagram.com/RYF">Instagram</a>
             </li>
           </ul>
         </div>
       </nav>
     </footer>
+    <script src="../src/index.js"></script>
   </body>
 </html>

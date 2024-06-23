@@ -25,9 +25,12 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- DOMPurify per CDN einbinden -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.5/dist/purify.min.js"></script>
   </head>
 
-  <!--Header-->
+  <!-----------------------Header--------------------->
   <body>
     <header>
       <nav class="navigation">
@@ -41,18 +44,42 @@
           </a>
           <ul class="nav-links">
             <li>
-              <form>
-                <input type="text" name="suche" placeholder="Suche" />
+              <form onsubmit="handleSearch(event)">
+                <input
+                  id="searchInput"
+                  type="text"
+                  name="suche"
+                  placeholder="Suche"
+                />
               </form>
+              <script>
+                function handleSearch() {
+                  const search = document.getElementById("searchInput").value;
+
+                  if (/[!?$]/.test(search)) {
+                    alert(
+                      "Ungültige Eingabe: Das Suchfeld darf keine Sonderzeichen wie !, ? enthalten."
+                    );
+                  }
+
+                  const safeSearch = window.DOMPurify.sanitize(search);
+
+                  if (safeSearch !== search) {
+                    alert(
+                      "Ungültige Eingabe: Das Suchfeld darf keine HTML-Tags enthalten."
+                    );
+                  }
+                }
+              </script>
             </li>
             <li>
-              <a href="./html/news.html">Aktuelles</a>
+              <a href="./news.html">Aktuelles</a>
             </li>
             <li>
-              <a href="./html/FAQ.html">FAQ</a>
+              <a href="./FAQ.html">FAQ</a>
             </li>
             <li>
-              <a href="./html/contact.html">Kontakt</a>
+              <a href="./contact.html">Kontakt</a>
             </li>
             <li>
               <a
@@ -90,18 +117,21 @@
             >Menü</a
           >
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./index.html">Aktuelles</a></li>
-            <li><a class="dropdown-item" href="./index.html">FAQ</a></li>
-            <li><a class="dropdown-item" href="./index.html">Kontakt</a></li>
-            <li><a class="dropdown-item" href="./index.html">DE</a></li>
-            <li><a class="dropdown-item" href="./index.html">AE</a></li>
+            <li>
+              <a class="dropdown-item" href="./news.html">Aktuelles</a>
+            </li>
+            <li><a class="dropdown-item" href="./faq.html">FAQ</a></li>
+            <li>
+              <a class="dropdown-item" href="./contact.html">Kontakt</a>
+            </li>
+            <li><a class="dropdown-item" href="../index.html">DE</a></li>
+            <li><a class="dropdown-item" href="./ae-index.html">AE</a></li>
           </ul>
         </div>
       </nav>
     </header>
-
     <p></p>
-    <!--Content-->
+    <!--------------------------Content-------------------------->
     <main>
       <div class="content">
         <div class="mainsection">
@@ -131,25 +161,24 @@
       </div>
     </main>
 
-    <!--Footer-->
+    <!--------------------------Footer---------------------->
     <footer>
-      <nav>
-        <div class="footer_links">
-          <ul class="nav justify-content-center">
+      <nav class="navigation">
+        <div class="nav-container">
+          <ul class="nav-links">
             <li>
-              <a class="nav-item" href="./privacy.html">Datenschutz</a>
+              <a href="./privacy.html">Datenschutz</a>
             </li>
             <li>
-              <a class="nav-item" href="./imprint.html">Impressum</a>
+              <a href="./imprint.html">Impressum</a>
             </li>
             <li>
-              <a class="nav-item" href="https://www.instagram.com/RYF"
-                >Instagram</a
-              >
+              <a href="https://www.instagram.com/RYF">Instagram</a>
             </li>
           </ul>
         </div>
       </nav>
     </footer>
+    <script src="../src/index.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@ header {
   width: 100%;
 }
 
-.nav-container {
+nav .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,17 +82,20 @@ label {
   left: 0;
   float: left;
   padding-top: 0.5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
   font-weight: lighter;
-  font-size: 130%;
+  font-size: 120%;
 }
 
 .sidebar a {
   color: lightgrey;
   text-decoration: none;
-}
-
-.sidebar ul {
-  list-style: none;
 }
 
 .nav-container a:hover,
@@ -113,7 +116,10 @@ footer {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+footer li {
+  padding-top: 0.9rem;
 }
 
 /* Navigation mit der ID nav-sm nur fürs Smartphone, standardmäßig ausblenden*/
@@ -148,19 +154,19 @@ footer {
   }
   #header_img_sm {
     height: 100%;
-    max-height: 70px;
+    max-height: 80px;
     width: auto;
   }
 
-  body {
-    background: var(--primary);
-    color: var(--white);
+  footer li {
+    padding-top: 0.7rem;
+    font-size: 90%;
   }
 }
 
 /* für Tablets*/
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .sidebar {
+  .sidebar li {
     font-size: 110%;
   }
 }

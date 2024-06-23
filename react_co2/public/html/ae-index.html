@@ -25,6 +25,9 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <!-- DOMPurify per CDN einbinden -->
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.5/dist/purify.min.js"></script>
   </head>
 
   <!-----------------------Header--------------------->
@@ -32,7 +35,7 @@
     <header>
       <nav class="navigation">
         <div class="nav-container">
-          <a href="./index.html">
+          <a href="">
             <img
               id="header_img"
               src="../img/CO2_Footprint.jpg"
@@ -41,18 +44,42 @@
           </a>
           <ul class="nav-links">
             <li>
-              <form>
-                <input type="text" name="suche" placeholder="Suche" />
+              <form onsubmit="handleSearch(event)">
+                <input
+                  id="searchInput"
+                  type="text"
+                  name="suche"
+                  placeholder="بحث"
+                />
               </form>
+              <script>
+                function handleSearch() {
+                  const search = document.getElementById("searchInput").value;
+
+                  if (/[!?$]/.test(search)) {
+                    alert(
+                      "إدخال غير صالح: يجب ألا يحتوي مربع البحث على أحرف خاصة مثل ، ؟ احتوى."
+                    );
+                  }
+
+                  const safeSearch = window.DOMPurify.sanitize(search);
+
+                  if (safeSearch !== search) {
+                    alert(
+                      "إدخال غير صالح: يجب ألا يحتوي مربع البحث على علامات HTML."
+                    );
+                  }
+                }
+              </script>
             </li>
             <li>
-              <a href="./html/news.html">Aktuelles</a>
+              <a href="">ت الانبعا</a>
             </li>
             <li>
-              <a href="./html/FAQ.html">FAQ</a>
+              <a href="">بيانات </a>
             </li>
             <li>
-              <a href="./html/contact.html">Kontakt</a>
+              <a href="">الاتصال</a>
             </li>
             <li>
               <a
@@ -61,12 +88,12 @@
                 href="#"
                 role="button"
                 aria-expanded="false"
-                >Sprache</a
+                >اللغة</a
               >
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="./index.html">DE</a></li>
+                <li><a class="dropdown-item" href="../index.html">DE</a></li>
                 <li>
-                  <a class="dropdown-item" href="./html/ae-index.html">AE</a>
+                  <a class="dropdown-item" href="./ae-index.html">AE</a>
                 </li>
               </ul>
             </li>
@@ -87,27 +114,29 @@
             href="#"
             role="button"
             aria-expanded="false"
-            >Menü</a
+            >قائمة</a
           >
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./index.html">Aktuelles</a></li>
-            <li><a class="dropdown-item" href="./index.html">FAQ</a></li>
-            <li><a class="dropdown-item" href="./index.html">Kontakt</a></li>
+            <li><a class="dropdown-item" href="">>ت الانبعا</a></li>
+            <li>
+              <a class="dropdown-item" href="">بيانات </a>
+            </li>
+            <li><a class="dropdown-item" href="">الاتصال</a></li>
             <li><a class="dropdown-item" href="./index.html">DE</a></li>
-            <li><a class="dropdown-item" href="./index.html">AE</a></li>
+            <li><a class="dropdown-item" href="./ae-index.html">AE</a></li>
           </ul>
         </div>
       </nav>
     </header>
     <p></p>
-    <!--Content-->
+    <!--------------------------Content-------------------------->
     <main>
       <!--Navigationsbereich-->
       <nav>
         <div class="sidebar">
           <ul>
             <li><a href="#facts" target="_self">الحقائق</a></li>
-            <li><a href="#emissions" target="_self">بيانات الانبعاثات</a></li>
+            <li><a href="#emissions" target="_self">بيانات الانبعاثات </a></li>
             <li><a href="#contribution" target="_self">اسهام</a></li>
             <li><a href="#donation" target="_self">تبرّع</a></li>
           </ul>
@@ -124,78 +153,94 @@
         </div>
         <div class="mainsection">
           <section>
-            <h2 id="facts">الحقائق</h2>
+            <h3 id="facts">الحقائق</h3>
             <p></p>
             <h5>بصمة ثاني أكسيد الكربون للفرد</h5>
             <ul>
-              يصدر الشخص في جميع أنحاء العالم حوالي 4.8 طن من ثاني أكسيد الكربون
-              كل عام.
+              <li>
+                يصدر الشخص في جميع أنحاء العالم حوالي 4.8 طن من ثاني أكسيد
+                الكربون كل عام.
+              </li>
             </ul>
             <ul>
-              لدول المتقدمة: في الولايات المتحدة الأمريكية، المتوسط ​​هو وتبلغ
-              البصمة الكربونية للشخص الواحد نحو 16.5 طن من مكافئ ثاني أكسيد
-              الكربون سنوياً، بينما ويبلغ حوالي 7.2 طن من ثاني أكسيد الكربون في
-              الاتحاد
+              <li>
+                لدول المتقدمة: في الولايات المتحدة الأمريكية، المتوسط ​​هو وتبلغ
+                البصمة الكربونية للشخص الواحد نحو 16.5 طن من مكافئ ثاني أكسيد
+                الكربون سنوياً، بينما ويبلغ حوالي 7.2 طن من ثاني أكسيد الكربون
+                في الاتحاد
+              </li>
             </ul>
             <ul>
-              بمعدل 1.9 طن من ثاني أكسيد الكربون سنويًا. البلدان النامية: في
-              الهند، تكون البصمة الكربونية لكل شخص
+              <li>
+                بمعدل 1.9 طن من ثاني أكسيد الكربون سنويًا. البلدان النامية: في
+                الهند، تكون البصمة الكربونية لكل شخص
+              </li>
             </ul>
 
             <h5>صادر انبعاثات ثاني أكسيد الكربون</h5>
             <ul>
-              نتاج الطاقة: مسؤول عن حوالي 73% من الإنتاج العالمي انبعاثات غازات
-              الاحتباس الحراري. الوقود الأحفوري (الفحم والنفط والغاز).
+              <li>
+                نتاج الطاقة: مسؤول عن حوالي 73% من الإنتاج العالمي انبعاثات
+                غازات الاحتباس الحراري. الوقود الأحفوري (الفحم والنفط والغاز).
+              </li>
             </ul>
             <ul>
-              قل: يسبب حوالي 14% من انبعاثات ثاني أكسيد الكربون العالمية.
+              <li>
+                قل: يسبب حوالي 14% من انبعاثات ثاني أكسيد الكربون العالمية.
+              </li>
             </ul>
             <ul>
-              لصناعة: تسبب حوالي 21% من انبعاثات ثاني أكسيد الكربون العالمية،
-              بشكل رئيسي من خلال إنتاج الصلب والأسمنت و
+              <li>
+                لصناعة: تسبب حوالي 21% من انبعاثات ثاني أكسيد الكربون العالمية،
+                بشكل رئيسي من خلال إنتاج الصلب والأسمنت و
+              </li>
             </ul>
             <ul>
-              لزراعة والغذاء: تساهم بحوالي 19% من الإنتاج العالمي انبعاثات CO2.
-              تربية الماشية وزراعة الأرز مهمة
+              <li>
+                لزراعة والغذاء: تساهم بحوالي 19% من الإنتاج العالمي انبعاثات
+                CO2. تربية الماشية وزراعة الأرز مهمة
+              </li>
             </ul>
             <ul>
-              نفايات ومياهCO2 الصرف الصحي: مسؤولة عن حوالي 3% من النفايات
-              العالمية
+              <li>
+                نفايات ومياهCO2 الصرف الصحي: مسؤولة عن حوالي 3% من النفايات
+                العالمية
+              </li>
             </ul>
 
             <h5>التأثير على المناخ</h5>
             <ul>
-              لاحتباس الحراري: منذ بداية الثورة الصناعية ارتفع متوسط ​​درجة
-              الحرارة العالمية بنحو 1.2 درجة
+              <li>
+                لاحتباس الحراري: منذ بداية الثورة الصناعية ارتفع متوسط ​​درجة
+                الحرارة العالمية بنحو 1.2 درجة
+              </li>
             </ul>
             <ul>
-              رتفاع مستوى سطح البحر: ارتفع مستوى سطح البحر بنحو 20 درجة منذ عام
-              1900 سم ومن المتوقع أن يرتفع بشكل أكبر بحلول عام 2100
+              <li>
+                رتفاع مستوى سطح البحر: ارتفع مستوى سطح البحر بنحو 20 درجة منذ
+                عام 1900 سم ومن المتوقع أن يرتفع بشكل أكبر بحلول عام 2100
+              </li>
             </ul>
             <ul>
-              الأحداث الجوية المتطرفة: تواتر وشدة موجات الحر والجفاف والفيضانات
-              والأعاصير
+              <li>
+                الأحداث الجوية المتطرفة: تواتر وشدة موجات الحر والجفاف
+                والفيضانات والأعاصير
+              </li>
             </ul>
-          </section>
-
-          <section>
-            <h2 id="emissions">CO<sub>2</sub>->بيانات الانبعاثات</h2>
-            <p></p>
-            <!--Tabelle-->
-            <table>
-              <thead>
-                <tr>
-                  <th>Land</th>
-                  <th>Unternehmen</th>
-                  <th>CO<sub>2</sub>-Ausstoß</th>
-                </tr>
-              </thead>
-            </table>
           </section>
           <p></p>
-
           <section>
-            <h2 id="contribution">اسهام</h2>
+            <!-- Bootstrap JS und benötigte Skripte -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+            <!--Tabelleninhalte von JSON werden hier in Form einer Tabelle eingefügt-->
+            <div id="dataTable"></div>
+          </section>
+          <p></p>
+          <section>
+            <p></p>
+            <h3 id="contribution">اسهام</h3>
             <!-- Grid-Cards aus Bootstrap -->
 
             <div class="container text-center">
@@ -234,28 +279,36 @@
                 </div>
               </div>
             </div>
+            <div class="sidenote">
+              <p></p>
+              <small>تم تحرير النص الكامل لصفحة الويب بواسطة انشاء</small>
+            </div>
+
             <p></p>
             <section>
-              <h2 id="donation">تبرّع</h2>
-              <p>
-                أعزائي المؤيدين، إن تأثير يتم الشعور بتغير المناخ في جميع أنحاء
-                العالم - الظواهر الجوية المتطرفة ، ذوبان الأنهار الجليدية
-                وارتفاع منسوب مياه البحر يهددان بيئتنا وسبل عيش الأجيال القادمة.
-                ولكن معا يمكننا أن نحدث فرقا ونحدث فرقا لكوكبنا حمى. لقد كنا
-                ملتزمين بشغف ب حماية المناخ. بواسطة إنوفيتي
-              </p>
-              <p>
-                صاحب الحساب: فريدريك هارتمان <br />
-                رقم الحساب المصرفي الدولي: DE89 3704 0044 0532 0130 00 <br />
-                BIC: COBADEFFXXX<br />
-                الغرض: "التبرع بحماية المناخ"
-              </p>
-            </section>
+              <p></p>
+              <h3 id="donation">تبرّع</h3>
 
+              أعزائي المؤيدين، إن تأثير يتم الشعور بتغير المناخ في جميع أنحاء
+              العالم - الظواهر الجوية المتطرفة ، ذوبان الأنهار الجليدية وارتفاع
+              منسوب مياه البحر يهددان بيئتنا وسبل عيش الأجيال القادمة. ولكن معا
+              يمكننا أن نحدث فرقا ونحدث فرقا لكوكبنا حمى. لقد كنا ملتزمين بشغف ب
+              حماية المناخ. بواسطة إنوفيتي <br />
+
+              <p></p>
+              صاحب الحساب: فريدريك هارتمان <br />
+              رقم الحساب المصرفي الدولي: DE89 3704 0044 0532 0130 00 <br />
+              BIC: COBADEFFXXX<br />
+              الغرض: "التبرع بحماية المناخ"
+            </section>
+            <p></p>
             <div class="sidenote">
               <small
-                >تم تحرير النص الكامل لصفحة الويب بواسطة ChatGPT انشاء</small
+                >أنحاء العالم - الظواهر الجوية المتطرفة ، ذوبان الأنهار الجليدية
+                وارتفاع منسوب مياه البحر يهددان بيئتنا ChatGPT أنحاء العالم
+                -</small
               >
+              <p></p>
             </div>
           </section>
         </div>
@@ -264,23 +317,22 @@
 
     <!--------------------------Footer---------------------->
     <footer>
-      <nav>
-        <div class="footer_links">
-          <!--Navigationsleiste in Anlehnung an Bootstrap-->
-          <ul class="nav justify-content-center">
+      <nav class="navigation">
+        <div class="nav-container">
+          <ul class="nav-links">
             <li>
-              <a class="footer_nav-item">حماية البيانات</a>
+              <a href="">الخصوصيه</a>
             </li>
             <li>
-              <a class="footer_nav-item">انستغرام</a>
+              <a href="">بصمه</a>
             </li>
             <li>
-              <a class="footer_nav-item">انستام</a>
+              <a href="">انستغرام</a>
             </li>
           </ul>
         </div>
       </nav>
     </footer>
-    <script src="../src/index.js"></script>
+    <script src="/react_co2/src/index.js"></script>
   </body>
 </html>
