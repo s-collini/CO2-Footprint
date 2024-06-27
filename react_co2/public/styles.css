@@ -1,0 +1,172 @@
+header {
+  background-color: lightgrey;
+  width: 100%;
+}
+
+nav .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header_img {
+  height: 100%;
+  max-height: 120px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-right: 2%;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+form input[type="text"] {
+  padding: 0.2rem;
+  border: none;
+}
+
+.nav-container a,
+#nav-sm a {
+  color: olivedrab;
+  text-decoration: none;
+}
+
+#title {
+  color: olivedrab;
+  font-family: fantasy;
+  text-align: center;
+}
+
+.content h3 {
+  font-weight: lighter;
+}
+
+.content {
+  width: 75%;
+  float: right;
+  margin-right: 2%;
+}
+
+.content li {
+  list-style-type: circle;
+}
+
+section {
+  margin-top: 3%;
+}
+
+.mainsection {
+  justify-content: flex-start;
+}
+
+label {
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.card-body h5 {
+  font-size: 110%;
+}
+
+.sidebar {
+  background-color: olivedrab;
+  height: auto;
+  width: 20%;
+  position: fixed;
+  left: 0;
+  float: left;
+  padding-top: 0.5rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  font-weight: lighter;
+  font-size: 120%;
+}
+
+.sidebar a {
+  color: lightgrey;
+  text-decoration: none;
+}
+
+.nav-container a:hover,
+.sidebar a:hover,
+.th:hover,
+#nav-sm a:hover {
+  color: green;
+}
+
+.sidenote {
+  color: darkgrey;
+  text-align: right;
+  font-size: 90%;
+}
+
+footer {
+  background-color: lightgrey;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  padding-top: 0.9rem;
+}
+
+/* Navigation mit der ID nav-sm nur fürs Smartphone, standardmäßig ausblenden*/
+#nav-sm {
+  display: none;
+}
+
+/* =============== Media Queries ===============  */
+/* für Smartphones*/
+@media screen and (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+  .sidenote {
+    font-size: 70%;
+  }
+
+  .content {
+    width: 90%;
+  }
+
+  header nav .nav-container {
+    display: none;
+  }
+
+  #nav-sm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3%;
+    font-size: 105%;
+  }
+  #header_img_sm {
+    height: 100%;
+    max-height: 80px;
+    width: auto;
+  }
+
+  footer li {
+    padding-top: 0.7rem;
+    font-size: 90%;
+  }
+}
+
+/* für Tablets*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .sidebar li {
+    font-size: 110%;
+  }
+}

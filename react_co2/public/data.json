@@ -1,17 +1,17 @@
 [
   {
     "Land": "China",
-    "Unternehmen": "China (Coal)",
+    "Unternehmen": "Coal",
     "CO2_Ausstoß": 8438.98
   },
   {
     "Land": "Saudi Arabien",
-    "Unternehmen": "Saudi Arabian Oil Company (Aramco)",
+    "Unternehmen": "Aramco",
     "CO2_Ausstoß": 2651.91
   },
   {
     "Land": "Russland",
-    "Unternehmen": "Gazprom OAO",
+    "Unternehmen": "Gazprom",
     "CO2_Ausstoß": 2304.22
   },
   {
@@ -21,37 +21,37 @@
   },
   {
     "Land": "USA",
-    "Unternehmen": "ExxonMobil Corp",
+    "Unternehmen": "New York Oil Co",
     "CO2_Ausstoß": 1166.84
   },
   {
     "Land": "Indien",
-    "Unternehmen": "Coal India",
+    "Unternehmen": "Coal",
     "CO2_Ausstoß": 1102.01
   },
   {
     "Land": "Mexiko",
-    "Unternehmen": "Petroleos Mexicanos (Pemex)",
+    "Unternehmen": "Petroleos Mexicanos",
     "CO2_Ausstoß": 1102.01
   },
   {
     "Land": "Russland",
-    "Unternehmen": "Russia (Coal)",
+    "Unternehmen": "Coal",
     "CO2_Ausstoß": 1096.12
   },
   {
     "Land": "Niederlande",
-    "Unternehmen": "Royal Dutch Shell PLC",
+    "Unternehmen": "Royal Dutch Shell",
     "CO2_Ausstoß": 984.15
   },
   {
     "Land": "China",
-    "Unternehmen": "China National Petroleum Corp (CNPC",
+    "Unternehmen": "China Petroleum Corp",
     "CO2_Ausstoß": 919.33
   },
   {
     "Land": "Grossbritanien",
-    "Unternehmen": "BP PLC",
+    "Unternehmen": "BP ",
     "CO2_Ausstoß": 901.65
   },
   {
@@ -61,7 +61,7 @@
   },
   {
     "Land": "Venezuela",
-    "Unternehmen": "Petroleos de Venezuela SA (PDVSA)",
+    "Unternehmen": "Petroleos de Venezuela",
     "CO2_Ausstoß": 724.85
   },
   {
@@ -71,47 +71,47 @@
   },
   {
     "Land": "Polen",
-    "Unternehmen": "Poland Coal",
+    "Unternehmen": "Coal",
     "CO2_Ausstoß": 683.61
   },
   {
     "Land": "USA",
-    "Unternehmen": "Peabody Energy Corp",
+    "Unternehmen": "Boston Corp",
     "CO2_Ausstoß": 677.71
   },
   {
     "Land": "Algerien",
-    "Unternehmen": "Sonatrach SPA",
+    "Unternehmen": "Algerian Oil Co ",
     "CO2_Ausstoß": 589.31
   },
   {
     "Land": "Arabien",
-    "Unternehmen": "Kuwait Petroleum Corp",
+    "Unternehmen": "Arabian Oil Corp",
     "CO2_Ausstoß": 589.31
   },
   {
     "Land": "Frankreich",
-    "Unternehmen": "Total SA",
+    "Unternehmen": "French Shell",
     "CO2_Ausstoß": 559.84
   },
   {
     "Land": "Australien",
-    "Unternehmen": "BHP Billiton Ltd",
+    "Unternehmen": "BP Ltd",
     "CO2_Ausstoß": 536.27
   },
   {
     "Land": "USA",
-    "Unternehmen": "ConocoPhillips",
+    "Unternehmen": "Eni USA",
     "CO2_Ausstoß": 536.27
   },
   {
     "Land": "Brasilien",
-    "Unternehmen": "Petroleo Brasileiro SA (Petrobras)",
+    "Unternehmen": "Petroleo Brasiliero",
     "CO2_Ausstoß": 453.77
   },
   {
     "Land": "Russland",
-    "Unternehmen": "Lukoil OAO",
+    "Unternehmen": "Russian Oil Co",
     "CO2_Ausstoß": 441.98
   },
   {
@@ -126,12 +126,12 @@
   },
   {
     "Land": "Malaysia",
-    "Unternehmen": "Petroliam Nasional Berhad (Petronas",
+    "Unternehmen": "Oil Company",
     "CO2_Ausstoß": 406.62
   },
   {
     "Land": "Russland",
-    "Unternehmen": "Rosneft OAO",
+    "Unternehmen": "Russian Gasolina",
     "CO2_Ausstoß": 383.05
   },
   {
@@ -146,7 +146,7 @@
   },
   {
     "Land": "Spanien",
-    "Unternehmen": "Eni SPA",
+    "Unternehmen": "Eni",
     "CO2_Ausstoß": 347.69
   }
 ]

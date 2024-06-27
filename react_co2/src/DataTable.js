@@ -1,29 +1,35 @@
 import React, { useState } from "react";
 
+//Konstante Variable, um Sortierung von Schlüssel und Richtung zu speichern
 const DataTable = ({ data }) => {
-  const [sortConfig, setSortConfig] = useState({ key: "", direction: "" });
+  const [sorting, setSorting] = useState({ key: "", direction: "" });
 
   const sortData = (data) => {
-    if (!sortConfig.key) return data;
+    // Wenn sorting.key nicht gesetzt ist, werden die Daten unverändert zurückgegeben
+    if (!sorting.key) return data;
+    // Eine kopierte Version der Daten wird sortiert und zurückgegeben
     return [...data].sort((a, b) => {
-      if (a[sortConfig.key] < b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? -1 : 1;
+      if (a[sorting.key] < b[sorting.key]) {
+        return sorting.direction === "ascending" ? -1 : 1;
       }
-      if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1;
+      if (a[sorting.key] > b[sorting.key]) {
+        return sorting.direction === "ascending" ? 1 : -1;
       }
+      // keine Änderung in der Reihenfolge, wenn die Werte gleich sind
       return 0;
     });
   };
 
   const requestSort = (key) => {
-    let direction = "ascending";
-    if (sortConfig.key === key && sortConfig.direction === "ascending") {
+    let direction = "ascending"; //Standardsortierung aufsteigend
+    //wenn Sortierung bereits aufsteigend, dann auf absteigend wechseln
+    if (sorting.key === key && sorting.direction === "ascending") {
       direction = "descending";
     }
-    setSortConfig({ key, direction });
+    //Aktualisierung der Sortierung mit neuem Schlüssel und Richtung
+    setSorting({ key, direction });
   };
-
+  //Daten sortieren und in sortedData speichern
   const sortedData = sortData(data);
 
   return (
