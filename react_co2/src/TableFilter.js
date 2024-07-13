@@ -16,10 +16,12 @@ const TableFilter = () => {
 
   // Bereinigt Filter Land
   const handleFilterLand = (event) => {
+    //Ruft aktuellen Wert des Eingabefeldes ab
     const value = event.target.value;
 
-    // Prüft Eingabe auf spezifische Sonderzeichen in Filter Land und gibt Fehlermeldung zurück
+    // Prüft Eingabe auf spezifische Sonderzeichen in Filter Land
     if (/[!?$]/.test(value)) {
+      //gibt Fehlermeldung zurück falls Sonderzeichen eingegeben wurden
       alert(
         "Ungültige Eingabe: Das Suchfeld darf keine Sonderzeichen wie !, ? enthalten."
       );
@@ -28,20 +30,23 @@ const TableFilter = () => {
     // Säubert den Wert mit DOMPurify
     const cleanedValue = window.DOMPurify.sanitize(value);
 
-    // Überprüft, ob DOMPurify Änderungen vorgenommen hat
+    // Überprüft, ob DOMPurify Änderungen vorgenommen hat. Wenn der bereinigte Wert nicht mit dem ursprünglichen Wert übereinstimmt, dann wurden HTML-Tags entfernt.
     if (cleanedValue !== value) {
+      //gibt Fehlermeldung zurück falls HTML-Code eingegeben wurde
       alert("Ungültige Eingabe: Das Suchfeld darf keine HTML-Tags enthalten.");
     }
 
-    // setzt gesäuberten Werts "&lt;"
+    // setzt gesäuberten Wert
     setFilterLand(cleanedValue);
   };
   // Bereinigt Filter Unternehmen
   const handleFilterUnternehmen = (event) => {
+    //Ruft aktuellen Wert des Eingabefeldes ab
     const value = event.target.value;
 
-    // Prüft Eingabe auf spezifische Sonderzeichen in Filter Unternehmen und gibt Fehlermeldung zurück
+    // Prüft Eingabe auf spezifische Sonderzeichen in Filter Unternehmen
     if (/[!?$]/.test(value)) {
+      //gibt Fehlermeldung zurück falls Sonderzeichen eingegeben wurden
       alert(
         "Ungültige Eingabe: Das Suchfeld darf keine Sonderzeichen wie !, ? enthalten."
       );
@@ -50,11 +55,12 @@ const TableFilter = () => {
     // Säubert den Wert mit DOMPurify
     const cleanedValue = window.DOMPurify.sanitize(value);
 
-    // Überprüft, ob DOMPurify Änderungen vorgenommen hat
+    // Überprüft, ob DOMPurify Änderungen vorgenommen hat. Wenn der bereinigte Wert nicht mit dem ursprünglichen Wert übereinstimmt, dann wurden HTML-Tags entfernt.
     if (cleanedValue !== value) {
+      //gibt Fehlermeldung zurück falls HTML-Code eingegeben wurde
       alert("Ungültige Eingabe: Das Suchfeld darf keine HTML-Tags enthalten.");
     }
-    // setzt gesäuberten Werts "&lt;"
+    // setzt gesäuberten Wert
     setFilterUnternehmen(cleanedValue);
   };
 
@@ -78,6 +84,7 @@ const TableFilter = () => {
         placeholder="nach Land"
       />
       <label htmlFor="filterUnternehmen"></label>
+
       <input
         type="text"
         id="filterUnternehmen"
@@ -85,7 +92,6 @@ const TableFilter = () => {
         onChange={handleFilterUnternehmen}
         placeholder="nach Unternehmen"
       />
-      <p></p>
 
       <DataTable data={filterData} />
     </div>

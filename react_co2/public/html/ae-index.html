@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Dokumentensprache Arabisch mit Schreibweise rechts nach links-->
+<!--Dokumentsprache Arabisch mit Schreibweise rechts nach links-->
 <html lang="ae" dir="rtl">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,7 @@
     <!--Einbinden der CSS-Datei für das Design-->
     <link rel="stylesheet" type="text/css" href="../ae-styles.css" />
 
-    <title>ReduceYourFootprint Initiative</title>
+    <title>مبادرة تقليل بصمتك</title>
 
     <!-- Bootstrap per CDN einbinden-->
     <link
@@ -21,7 +21,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
     <!-- DOMPurify per CDN einbinden -->
     <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.5/dist/purify.min.js"></script>
   </head>
@@ -31,11 +30,11 @@
     <header>
       <nav class="navigation">
         <div class="nav-container">
-          <a href="">
+          <a href="#">
             <img
               id="header_img"
               src="../img/CO2_Footprint.jpg"
-              alt="Website-Logo"
+              alt="بياناتصا"
             />
           </a>
           <ul class="nav-links">
@@ -48,6 +47,7 @@
                   placeholder="بحث"
                 />
               </form>
+              <!-- XSS-Absicherung direkt im HTML-Code-->
               <script>
                 function handleSearch() {
                   const search = document.getElementById("searchInput").value;
@@ -62,23 +62,22 @@
 
                   if (safeSearch !== search) {
                     alert(
-                      "إدخال غير صالح: يجب ألا يحتوي مربع البحث على علامات HTML."
+                      "إدخال غير صالح: يجب ألا يحتوي مربع البحث على علامات "
                     );
                   }
                 }
               </script>
             </li>
             <li>
-              <a href="">بيانات </a>
+              <a href="#">بيانات </a>
             </li>
             <li>
-              <a href="">الاتصال</a>
+              <a href="#">الاتصال</a>
             </li>
             <li>
               <a
                 class="dropdown-toggle"
                 data-bs-toggle="dropdown"
-                href="#"
                 role="button"
                 aria-expanded="false"
                 >اللغة</a
@@ -94,17 +93,15 @@
         </div>
 
         <div id="nav-sm">
-          <a href="./index.html">
-            <img
-              id="header_img_sm"
-              src="../img/CO2_Footprint.jpg"
-              alt="Website-Logo"
-            />
-          </a>
+          <img
+            id="header_img_sm"
+            src="../img/CO2_Footprint.jpg"
+            alt="بياناتصا"
+          />
+
           <a
             class="nav-link dropdown-toggle"
             data-bs-toggle="dropdown"
-            href="#"
             role="button"
             aria-expanded="false"
             >قائمة</a
@@ -114,39 +111,36 @@
               <a class="dropdown-item" href="">بيانات </a>
             </li>
             <li><a class="dropdown-item" href="">الاتصال</a></li>
-            <li><a class="dropdown-item" href="./index.html">DE</a></li>
+            <li><a class="dropdown-item" href="../index.html">DE</a></li>
             <li><a class="dropdown-item" href="./ae-index.html">AE</a></li>
           </ul>
         </div>
       </nav>
     </header>
-    <p></p>
+
     <!--------------------------Content-------------------------->
     <main>
       <!--Navigationsbereich-->
       <nav>
-        <div class="sidebar">
+        <div id="sidebar">
           <ul>
             <li><a href="#facts" target="_self">الحقائق</a></li>
-            <li><a href="#emissions" target="_self">بيانات الانبعاثات </a></li>
             <li><a href="#contribution" target="_self">اسهام</a></li>
             <li><a href="#donation" target="_self">تبرّع</a></li>
           </ul>
         </div>
       </nav>
-      <p></p>
+
       <!--Sektionen-->
-      <div class="content">
+      <div id="content">
         <div id="title">
-          <section>
-            <h1>مرحبا بكم في مبادرة تقليل بصمتك</h1>
-            <p></p>
-          </section>
+          <h1>مرحبا بكم في مبادرة تقليل بصمتك</h1>
         </div>
-        <div class="mainsection">
+
+        <div id="mainsection">
           <section>
             <h3 id="facts">الحقائق</h3>
-            <p></p>
+
             <h5>بصمة ثاني أكسيد الكربون للفرد</h5>
             <ul>
               <li>
@@ -220,26 +214,16 @@
               </li>
             </ul>
           </section>
-          <p></p>
-          <section>
-            <!-- Bootstrap JS und benötigte Skripte -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-            <!--Tabelleninhalte von JSON werden hier in Form einer Tabelle eingefügt-->
-            <div id="dataTable"></div>
-          </section>
-          <p></p>
           <section>
-            <p></p>
             <h3 id="contribution">اسهام</h3>
-            <!-- Grid-Cards aus Bootstrap -->
 
+            <!-- Grid-Cards aus Bootstrap -->
             <div class="container text-center">
               <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-xs-1 g-4">
                 <div class="col">
                   <div class="card">
-                    <img src="../img/mobility.jpg" />
+                    <img src="../img/mobility.jpg" alt="التنقل" />
                     <div class="card-body">
                       <h5 class="card-title">التنقل</h5>
                     </div>
@@ -247,7 +231,7 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="../img/energy.jpg" />
+                    <img src="../img/energy.jpg" alt="طاقة" />
                     <div class="card-body">
                       <h5 class="card-title">طاقة</h5>
                     </div>
@@ -255,7 +239,7 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="../img/consumption.jpg" />
+                    <img src="../img/consumption.jpg" alt="استهلاك" />
                     <div class="card-body">
                       <h5 class="card-title">استهلاك</h5>
                     </div>
@@ -263,7 +247,7 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="../img/projects.jpg" />
+                    <img src="../img/projects.jpg" class="شاريعنا" />
                     <div class="card-body">
                       <h5 class="card-title">مشاريعنا</h5>
                     </div>
@@ -272,35 +256,32 @@
               </div>
             </div>
             <div class="sidenote">
-              <p></p>
               <small>تم تحرير النص الكامل لصفحة الويب بواسطة انشاء</small>
             </div>
+          </section>
 
-            <p></p>
-            <section>
-              <p></p>
-              <h3 id="donation">تبرّع</h3>
-
+          <section>
+            <h3 id="donation">تبرّع</h3>
+            <p>
               أعزائي المؤيدين، إن تأثير يتم الشعور بتغير المناخ في جميع أنحاء
               العالم - الظواهر الجوية المتطرفة ، ذوبان الأنهار الجليدية وارتفاع
               منسوب مياه البحر يهددان بيئتنا وسبل عيش الأجيال القادمة. ولكن معا
               يمكننا أن نحدث فرقا ونحدث فرقا لكوكبنا حمى. لقد كنا ملتزمين بشغف ب
-              حماية المناخ. بواسطة إنوفيتي <br />
+              حماية المناخ. بواسطة إنوفيتي
+            </p>
 
-              <p></p>
-              صاحب الحساب: فريدريك هارتمان <br />
-              رقم الحساب المصرفي الدولي: DE89 3704 0044 0532 0130 00 <br />
-              BIC: COBADEFFXXX<br />
+            <p>
+              صاحب الحساب: فريدريك هارتمان <span id="break"></span> رقم الحساب
+              المصرفي الدولي: DE89 3704 0044 0532 0130 00
+              <span id="break"></span> BIC: COBADEFFXXX<span id="break"></span>
               الغرض: "التبرع بحماية المناخ"
-            </section>
-            <p></p>
+            </p>
+
             <div class="sidenote">
-              <small
+              <small>
                 >أنحاء العالم - الظواهر الجوية المتطرفة ، ذوبان الأنهار الجليدية
                 وارتفاع منسوب مياه البحر يهددان بيئتنا ChatGPT أنحاء العالم
-                -</small
-              >
-              <p></p>
+              </small>
             </div>
           </section>
         </div>
@@ -313,18 +294,17 @@
         <div class="nav-container">
           <ul class="nav-links">
             <li>
-              <a href="">الخصوصيه</a>
+              <a href="#">الخصوصيه</a>
             </li>
             <li>
-              <a href="">بصمه</a>
+              <a href="#">بصمه</a>
             </li>
             <li>
-              <a href="">انستغرام</a>
+              <a href="#">انستغرام</a>
             </li>
           </ul>
         </div>
       </nav>
     </footer>
-    <script src="/react_co2/src/index.js"></script>
   </body>
 </html>

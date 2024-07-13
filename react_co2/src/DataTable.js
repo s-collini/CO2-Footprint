@@ -21,7 +21,8 @@ const DataTable = ({ data }) => {
   };
 
   const requestSort = (key) => {
-    let direction = "ascending"; //Standardsortierung aufsteigend
+    //Standardsortierung aufsteigend
+    let direction = "ascending";
     //wenn Sortierung bereits aufsteigend, dann auf absteigend wechseln
     if (sorting.key === key && sorting.direction === "ascending") {
       direction = "descending";

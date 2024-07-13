@@ -1,15 +1,11 @@
 <!DOCTYPE html>
-<!--Dokumentensprache Deutsch mit Schreibweise links nach rechts-->
+<!--Dokumentsprache Deutsch mit Schreibweise links nach rechts-->
 <html lang="de" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <!--Einbinden der CSS-Datei für das Design-->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../build/static/css/main.b7d5b111.css"
-    />
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
 
     <title>ReduceYourFootprint Initiative</title>
 
@@ -39,7 +35,7 @@
             <img
               id="header_img"
               src="./img/CO2_Footprint.jpg"
-              alt="Website-Logo"
+              alt="Webseiten-Logo"
             />
           </a>
           <ul class="nav-links">
@@ -52,6 +48,7 @@
                   placeholder="Suche"
                 />
               </form>
+              <!-- XSS-Absicherung direkt im HTML-Code-->
               <script>
                 function handleSearch() {
                   const search = document.getElementById("searchInput").value;
@@ -83,7 +80,6 @@
               <a
                 class="dropdown-toggle"
                 data-bs-toggle="dropdown"
-                href="#"
                 role="button"
                 aria-expanded="false"
                 >Sprache</a
@@ -103,35 +99,34 @@
             <img
               id="header_img_sm"
               src="./img/CO2_Footprint.jpg"
-              alt="Website-Logo"
+              alt="Webseiten-Logo"
             />
           </a>
           <!--Dropdowndeld von Bootstrap-->
           <a
             class="nav-link dropdown-toggle"
             data-bs-toggle="dropdown"
-            href="#"
             role="button"
             aria-expanded="false"
             >Menü</a
           >
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./html/faq.html">FAQ</a></li>
+            <li><a class="dropdown-item" href="./html/FAQ.html">FAQ</a></li>
             <li>
               <a class="dropdown-item" href="./html/contact.html">Kontakt</a>
             </li>
-            <li><a class="dropdown-item" href="./html/index.html">DE</a></li>
+            <li><a class="dropdown-item" href="./index.html">DE</a></li>
             <li><a class="dropdown-item" href="./html/ae-index.html">AE</a></li>
           </ul>
         </div>
       </nav>
     </header>
-    <p></p>
+
     <!----------------Content------------------------>
     <main>
       <!--Navigationsbereich mit lokalen Links-->
       <nav>
-        <div class="sidebar">
+        <div id="sidebar">
           <ul>
             <li><a href="#facts" target="_self">Fakten</a></li>
             <li><a href="#emissions" target="_self">Emissionsdaten</a></li>
@@ -140,38 +135,38 @@
           </ul>
         </div>
       </nav>
-      <p></p>
+
       <!--Sektionen-->
-      <div class="content">
+      <div id="content">
         <div id="title">
-          <section>
-            <h1>Willkommen bei ReduceYourFootprint Initiative</h1>
-            <p></p>
-          </section>
+          <h1>Willkommen bei ReduceYourFootprint Initiative</h1>
         </div>
-        <div class="mainsection">
+
+        <div id="mainsection">
           <section>
             <h3 id="facts">Fakten</h3>
 
             <h5>CO<sub>2</sub>-Fußabdruck pro Kopf</h5>
             <ul>
               <li>
-                Weltweiter Durchschnitt: Der durchschnittliche CO2-Fußabdruck
-                pro Person liegt weltweit bei etwa 4,8 Tonnen CO2e pro Jahr.
+                Weltweiter Durchschnitt: Der durchschnittliche
+                CO<sub>2</sub>-Fußabdruck pro Person liegt weltweit bei etwa 4,8
+                Tonnen CO<sub>2</sub>e pro Jahr.
               </li>
             </ul>
             <ul>
               <li>
                 Industrieländer: In den USA beträgt der durchschnittliche
-                CO<sub>2</sub>-Fußabdruck pro Person etwa 16,5 Tonnen CO2e pro
-                Jahr, während er in der EU bei etwa 7,2 Tonnen CO2e liegt.
+                CO<sub>2</sub>-Fußabdruck pro Person etwa 16,5 Tonnen
+                CO<sub>2</sub>e pro Jahr, während er in der EU bei etwa 7,2
+                Tonnen CO<sub>2</sub>e liegt.
               </li>
             </ul>
             <ul>
               <li>
                 Entwicklungsländer: In Indien liegt der
-                CO<sub>2</sub>-Fußabdruck pro Person bei etwa 1,9 Tonnen CO2e
-                pro Jahr.
+                CO<sub>2</sub>-Fußabdruck pro Person bei etwa 1,9 Tonnen
+                CO<sub>2</sub>e pro Jahr.
               </li>
             </ul>
 
@@ -232,7 +227,7 @@
               </li>
             </ul>
           </section>
-          <p></p>
+
           <section>
             <!-- Bootstrap JS und benötigte Skripte -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -241,18 +236,20 @@
             <!--Tabelleninhalte von JSON werden hier in Form einer Tabelle eingefügt-->
             <div id="root"></div>
           </section>
-          <p></p>
+
           <section>
-            <p></p>
-
             <h3 id="contribution">Beitrag leisten</h3>
-            <!-- Grid-Cards von Bootstrap -->
 
+            <!-- Grid-Cards von Bootstrap -->
             <div class="container text-center">
               <div class="row row-cols-lg-4 row-cols-sm-2 row-cols-1 g-3">
                 <div class="col">
                   <div class="card">
-                    <img src="./img/mobility.jpg" class="img-fluid" />
+                    <img
+                      src="./img/mobility.jpg"
+                      alt="Mobilität"
+                      class="img-fluid"
+                    />
                     <div class="card-body">
                       <h5 class="card-title">Mobilität</h5>
                     </div>
@@ -260,7 +257,11 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="./img/energy.jpg" class="img-fluid" />
+                    <img
+                      src="./img/energy.jpg"
+                      alt="Energie"
+                      class="img-fluid"
+                    />
                     <div class="card-body">
                       <h5 class="card-title">Energie</h5>
                     </div>
@@ -268,7 +269,11 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="./img/consumption.jpg" class="img-fluid" />
+                    <img
+                      src="./img/consumption.jpg"
+                      alt="Konsum"
+                      class="img-fluid"
+                    />
                     <div class="card-body">
                       <h5 class="card-title">Konsum</h5>
                     </div>
@@ -276,7 +281,11 @@
                 </div>
                 <div class="col">
                   <div class="card">
-                    <img src="./img/projects.jpg" class="img-fluid" />
+                    <img
+                      src="./img/projects.jpg"
+                      alt="Unsere Projekte"
+                      class="img-fluid"
+                    />
                     <div class="card-body">
                       <h5 class="card-title">Unsere Projekte</h5>
                     </div>
@@ -285,14 +294,13 @@
               </div>
             </div>
             <div class="sidenote">
-              <p></p>
-              <small>Fotoquelle (ausgenommen Website-Logo): Pixabay</small>
+              <small>Fotoquelle (ausgenommen Webseiten-Logo): Pixabay</small>
             </div>
-            <p></p>
-            <section>
-              <p></p>
-              <h3 id="donation">Spenden</h3>
+          </section>
+          <section>
+            <h3 id="donation">Spenden</h3>
 
+            <p>
               Liebe Unterstützerinnen und Unterstützer, die Auswirkungen des
               Klimawandels sind weltweit spürbar – extreme Wetterereignisse,
               schmelzende Gletscher und steigende Meeresspiegel bedrohen unsere
@@ -302,20 +310,20 @@
               ein. Durch innovative Projekte, Aufklärungskampagnen und
               nachhaltige Initiativen kämpfen wir gegen die Klimakrise an. Doch
               wir brauchen Ihre Hilfe, um unsere Arbeit fortsetzen und ausweiten
-              zu können. <br />
-              <p></p>
-              Kontoinhaber: Frederik Hartmann <br />
-              IBAN: DE89 3704 0044 0532 0130 00 <br />
-              BIC: COBADEFFXXX <br />
+              zu können.
+            </p>
+            <p>
+              Kontoinhaber: Frederik Hartmann <span id="break"></span> IBAN:
+              DE89 3704 0044 0532 0130 00 <span id="break"></span> BIC:
+              COBADEFFXXX <span id="break"></span>
               Verwendungszweck: „Spende Klimaschutz“
-            </section>
-            <p></p>
+            </p>
+
             <div class="sidenote">
               <small
                 >Der gesamte Text der Webseite wurde durch ChatGPT
                 generiert</small
               >
-              <p></p>
             </div>
           </section>
         </div>
@@ -340,6 +348,6 @@
         </div>
       </nav>
     </footer>
-    <script src="../build/static/js/main.945e8c7a.js"></script>
+    <script src="../src/index.js"></script>
   </body>
 </html>

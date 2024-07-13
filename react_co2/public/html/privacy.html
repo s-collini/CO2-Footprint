@@ -1,4 +1,5 @@
-<!--Dokumentensprache Deutsch mit Schreibweise links nach rechts-->
+<!DOCTYPE html>
+<!--Dokumentsprache Deutsch mit Schreibweise links nach rechts-->
 <html lang="de" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,7 +35,7 @@
             <img
               id="header_img"
               src="../img/CO2_Footprint.jpg"
-              alt="Website-Logo"
+              alt="Webseiten-Logo"
             />
           </a>
           <ul class="nav-links">
@@ -47,6 +48,7 @@
                   placeholder="Suche"
                 />
               </form>
+              <!-- XSS-Absicherung direkt im HTML-Code-->
               <script>
                 function handleSearch() {
                   const search = document.getElementById("searchInput").value;
@@ -78,7 +80,6 @@
               <a
                 class="dropdown-toggle"
                 data-bs-toggle="dropdown"
-                href="#"
                 role="button"
                 aria-expanded="false"
                 >Sprache</a
@@ -98,19 +99,18 @@
             <img
               id="header_img_sm"
               src="../img/CO2_Footprint.jpg"
-              alt="Website-Logo"
+              alt="Webseiten-Logo"
             />
           </a>
           <a
             class="nav-link dropdown-toggle"
             data-bs-toggle="dropdown"
-            href="#"
             role="button"
             aria-expanded="false"
             >Menü</a
           >
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./faq.html">FAQ</a></li>
+            <li><a class="dropdown-item" href="./FAQ.html">FAQ</a></li>
             <li>
               <a class="dropdown-item" href="./contact.html">Kontakt</a>
             </li>
@@ -120,26 +120,27 @@
         </div>
       </nav>
     </header>
-    <p></p>
     <!--------------------------Content-------------------------->
     <main>
-      <div class="content">
-        <div class="mainsection">
+      <div id="content">
+        <div id="mainsection">
           <section>
-            <h2>Datenschutzerklärung</h2>
-            <p></p>
+            <h1>Datenschutzerklärung</h1>
 
-            Datenerfassung auf unserer Webseite: <br />
-            <p></p>
-            Wer ist verantwortlich für die Datenerfassung auf dieser Website?
-            <br />
+            <p>Datenerfassung auf unserer Webseite:</p>
+            <span id="break"></span>
+            <b
+              >Wer ist verantwortlich für die Datenerfassung auf dieser
+              Website?</b
+            >
+            <span id="break"></span>
             <p>
               Die Datenverarbeitung auf dieser Website erfolgt durch den
               Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum
               dieser Website entnehmen.
             </p>
 
-            Wie erfassen wir Ihre Daten?<br />
+            <b>Wie erfassen wir Ihre Daten?</b><span id="break"></span>
             <p>
               Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese
               mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in
@@ -149,15 +150,15 @@
               Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt
               automatisch, sobald Sie unsere Website betreten.
             </p>
-            Wofür nutzen wir Ihre Daten?<br />
+            <b>Wofür nutzen wir Ihre Daten?</b><span id="break"></span>
             <p>
               Ein Teil der Daten wird erhoben, um eine fehlerfreie
               Bereitstellung der Website zu gewährleisten. Andere Daten können
               zur Analyse Ihres Nutzerverhaltens verwendet werden.
             </p>
 
-            Welche Rechte haben Sie bezüglich Ihrer Daten?
-            <br />
+            <b>Welche Rechte haben Sie bezüglich Ihrer Daten?</b>
+            <span id="break"></span>
             <p>
               Sie haben jederzeit das Recht, unentgeltlich Auskunft über
               Herkunft, Empfänger und Zweck Ihrer gespeicherten
@@ -169,20 +170,25 @@
               zuständigen Aufsichtsbehörde zu.
             </p>
 
-            <u>Hinweis zur verantwortlichen Stelle</u><br />
             <p>
-              Die verantwortliche Stelle für die Datenverarbeitung auf dieser
-              Website ist:<br />
+              <u>Hinweis zur verantwortlichen Stelle</u><span id="break"></span>
 
-              ReduceYourFootprint Initiative<br />
-              Maurerstraße 20<br />
-              6900 Bregenz<br />
-              Österreich<br />
+              Die verantwortliche Stelle für die Datenverarbeitung auf dieser
+              Website ist:<span id="break"></span>
             </p>
 
-            <p></p>
-            Telefon: +43 (0) 664 4563820<br />
-            E-Mail: info@reduceyourfootprint.de<br />
+            <p>
+              ReduceYourFootprint Initiative<span id="break"></span>
+              Maurerstraße 20<span id="break"></span> 6900 Bregenz<span
+                id="break"
+              ></span>
+              Österreich<span id="break"></span>
+            </p>
+
+            <p>
+              Telefon: +43 (0) 664 4563820<span id="break"></span> E-Mail:
+              info@reduceyourfootprint.at<span id="break"></span>
+            </p>
 
             <p>
               Verantwortliche Stelle ist die natürliche oder juristische Person,
@@ -190,64 +196,74 @@
               der Verarbeitung von personenbezogenen Daten (z.B. Namen,
               E-Mail-Adressen o. Ä.) entscheidet.
             </p>
-            <p></p>
-            <u>Widerruf Ihrer Einwilligung zur Datenverarbeitung</u><br />
 
-            Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen
-            Einwilligung möglich. Sie können eine bereits erteilte Einwilligung
-            jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per
-            E-Mail an uns. Die Rechtmäßigkeit der bis zum Widerruf erfolgten
-            Datenverarbeitung bleibt vom Widerruf unberührt.
+            <p>
+              <u>Widerruf Ihrer Einwilligung zur Datenverarbeitung</u
+              ><span id="break"></span>
 
-            <p></p>
-            <u
-              >Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen
-              sowie gegen Direktwerbung (Art. 21 DSGVO)</u
-            ><br />
+              Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen
+              Einwilligung möglich. Sie können eine bereits erteilte
+              Einwilligung jederzeit widerrufen. Dazu reicht eine formlose
+              Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bis zum
+              Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf
+              unberührt.
+            </p>
 
-            Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e
-            oder f DSGVO erfolgt, haben Sie jederzeit das Recht, aus Gründen,
-            die sich aus Ihrer besonderen Situation ergeben, gegen die
-            Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen;
-            dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling.
-            Die jeweilige Rechtsgrundlage, auf denen eine Verarbeitung beruht,
-            entnehmen Sie dieser Datenschutzerklärung. Wenn Sie Widerspruch
-            einlegen, werden wir Ihre betroffenen personenbezogenen Daten nicht
-            mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige
-            Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte
-            und Freiheiten überwiegen oder die Verarbeitung dient der
-            Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen
-            (Widerspruch nach Art. 21 Abs. 1 DSGVO).
-            <p></p>
+            <p>
+              <u
+                >Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen
+                sowie gegen Direktwerbung (Art. 21 DSGVO)</u
+              ><span id="break"></span>
+              Wenn die Datenverarbeitung auf Grundlage von Art. 6 Abs. 1 lit. e
+              oder f DSGVO erfolgt, haben Sie jederzeit das Recht, aus Gründen,
+              die sich aus Ihrer besonderen Situation ergeben, gegen die
+              Verarbeitung Ihrer personenbezogenen Daten Widerspruch einzulegen;
+              dies gilt auch für ein auf diese Bestimmungen gestütztes
+              Profiling. Die jeweilige Rechtsgrundlage, auf denen eine
+              Verarbeitung beruht, entnehmen Sie dieser Datenschutzerklärung.
+              Wenn Sie Widerspruch einlegen, werden wir Ihre betroffenen
+              personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir
+              können zwingende schutzwürdige Gründe für die Verarbeitung
+              nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen
+              oder die Verarbeitung dient der Geltendmachung, Ausübung oder
+              Verteidigung von Rechtsansprüchen (Widerspruch nach Art. 21 Abs. 1
+              DSGVO).
+            </p>
+            <p>
+              Werden Ihre personenbezogenen Daten verarbeitet, um Direktwerbung
+              zu betreiben, so haben Sie das Recht, jederzeit Widerspruch gegen
+              die Verarbeitung Sie betreffender personenbezogenen Daten zum
+              Zwecke derartiger Werbung einzulegen; dies gilt auch für das
+              Profiling, soweit es mit solcher Direktwerbung in Verbindung
+              steht. Wenn Sie widersprechen, werden Ihre personenbezogenen Daten
+              anschließend nicht mehr zum Zwecke der Direktwerbung verwendet
+              (Widerspruch nach Art. 21 Abs. 2 DSGVO).
+            </p>
+            <p>
+              <u>Beschwerderecht bei der zuständigen Aufsichtsbehörde</u
+              ><span id="break"></span>
 
-            Werden Ihre personenbezogenen Daten verarbeitet, um Direktwerbung zu
-            betreiben, so haben Sie das Recht, jederzeit Widerspruch gegen die
-            Verarbeitung Sie betreffender personenbezogenen Daten zum Zwecke
-            derartiger Werbung einzulegen; dies gilt auch für das Profiling,
-            soweit es mit solcher Direktwerbung in Verbindung steht. Wenn Sie
-            widersprechen, werden Ihre personenbezogenen Daten anschließend
-            nicht mehr zum Zwecke der Direktwerbung verwendet (Widerspruch nach
-            Art. 21 Abs. 2 DSGVO).
-            <p></p>
-            <u>Beschwerderecht bei der zuständigen Aufsichtsbehörde</u><br />
+              Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein
+              Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem
+              Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes
+              oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht
+              besteht unbeschadet anderweitiger verwaltungsrechtlicher oder
+              gerichtlicher Rechtsbehelfe.
+            </p>
 
-            Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein
-            Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem
-            Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes
-            oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht
-            besteht unbeschadet anderweitiger verwaltungsrechtlicher oder
-            gerichtlicher Rechtsbehelfe.
-            <p></p>
-            <u>Auskunft, Löschung und Berichtigung</u> <br />
-            Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen
-            jederzeit das Recht auf unentgeltliche Auskunft über Ihre
-            gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger
-            und den Zweck der Datenverarbeitung und ggf. ein Recht auf
-            Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren
-            Fragen zum Thema personenbezogene Daten können Sie sich jederzeit
-            unter der im Impressum angegebenen Adresse an uns wenden.
+            <p>
+              <u>Auskunft, Löschung und Berichtigung</u><span id="break"></span>
+              Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen
+              jederzeit das Recht auf unentgeltliche Auskunft über Ihre
+              gespeicherten personenbezogenen Daten, deren Herkunft und
+              Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht
+              auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu
+              weiteren Fragen zum Thema personenbezogene Daten können Sie sich
+              jederzeit unter der im Impressum angegebenen Adresse an uns
+              wenden.
+            </p>
           </section>
-          <p></p>
+
           <div class="sidenote">
             <small
               >Der gesamte Text der Webseite wurde durch ChatGPT
@@ -276,6 +292,5 @@
         </div>
       </nav>
     </footer>
-    <script src="../src/index.js"></script>
   </body>
 </html>

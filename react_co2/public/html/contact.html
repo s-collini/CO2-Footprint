@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Dokumentensprache Deutsch mit Schreibweise links nach rechts-->
+<!--Dokumentsprache Deutsch mit Schreibweise links nach rechts-->
 <html lang="de" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,7 +35,7 @@
             <img
               id="header_img"
               src="../img/CO2_Footprint.jpg"
-              alt="Website-Logo"
+              alt="Webseiten-Logo"
             />
           </a>
           <ul class="nav-links">
@@ -48,6 +48,7 @@
                   placeholder="Suche"
                 />
               </form>
+              <!-- XSS-Absicherung direkt im HTML-Code-->
               <script>
                 function handleSearch() {
                   const search = document.getElementById("searchInput").value;
@@ -79,7 +80,6 @@
               <a
                 class="dropdown-toggle"
                 data-bs-toggle="dropdown"
-                href="#"
                 role="button"
                 aria-expanded="false"
                 >Sprache</a
@@ -99,19 +99,18 @@
             <img
               id="header_img_sm"
               src="../img/CO2_Footprint.jpg"
-              alt="Website-Logo"
+              alt="Webseiten-Logo"
             />
           </a>
           <a
             class="nav-link dropdown-toggle"
             data-bs-toggle="dropdown"
-            href="#"
             role="button"
             aria-expanded="false"
             >Menü</a
           >
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./faq.html">FAQ</a></li>
+            <li><a class="dropdown-item" href="./FAQ.html">FAQ</a></li>
             <li>
               <a class="dropdown-item" href="./contact.html">Kontakt</a>
             </li>
@@ -121,27 +120,28 @@
         </div>
       </nav>
     </header>
-    <p></p>
+
     <!--------------------------Content-------------------------->
     <main>
-      <div class="content">
-        <div class="mainsection">
+      <div id="content">
+        <div id="mainsection">
           <section>
-            <h2>Kontakt</h2>
-            <p></p>
+            <h1>Kontakt</h1>
+
             <p>
-              Adresse: <br />
-              ReduceYourFootprint Initiative<br />
-              Maurerstraße 20<br />
-              6900 Bregenz<br />
-              Österreich<br />
+              Adresse: <span id="break"></span> ReduceYourFootprint
+              Initiative<span id="break"></span> Maurerstraße 20<span
+                id="break"
+              ></span>
+              6900 Bregenz<span id="break"></span> Österreich<span
+                id="break"
+              ></span>
             </p>
 
-            <p></p>
-            Telefon: +43 (0) 664 4563820<br />
-            E-Mail: info@reduceyourfootprint.de<br />
+            Telefon: +43 (0) 664 4563820<span id="break"></span> E-Mail:
+            info@reduceyourfootprint.at <span id="break"></span>
           </section>
-          <p></p>
+
           <div class="sidenote">
             <small
               >Der gesamte Text der Webseite wurde durch ChatGPT
@@ -170,6 +170,5 @@
         </div>
       </nav>
     </footer>
-    <script src="/react_co2/build/static/js/main.945e8c7a.js"></script>
   </body>
 </html>

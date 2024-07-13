@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Dokumentensprache Deutsch mit Schreibweise links nach rechts-->
+<!--Dokumentsprache Deutsch mit Schreibweise links nach rechts-->
 <html lang="de" dir="ltr">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,7 +35,7 @@
             <img
               id="header_img"
               src="../img/CO2_Footprint.jpg"
-              alt="Website-Logo"
+              alt="Webseiten-Logo"
             />
           </a>
           <ul class="nav-links">
@@ -48,6 +48,7 @@
                   placeholder="Suche"
                 />
               </form>
+              <!-- XSS-Absicherung direkt im HTML-Code-->
               <script>
                 function handleSearch() {
                   const search = document.getElementById("searchInput").value;
@@ -79,7 +80,6 @@
               <a
                 class="dropdown-toggle"
                 data-bs-toggle="dropdown"
-                href="#"
                 role="button"
                 aria-expanded="false"
                 >Sprache</a
@@ -99,20 +99,19 @@
             <img
               id="header_img_sm"
               src="../img/CO2_Footprint.jpg"
-              alt="Website-Logo"
+              alt="Webseiten-Logo"
             />
           </a>
           <a
             class="nav-link dropdown-toggle"
             data-bs-toggle="dropdown"
-            href="#"
             role="button"
             aria-expanded="false"
             >Menü</a
           >
 
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./faq.html">FAQ</a></li>
+            <li><a class="dropdown-item" href="./FAQ.html">FAQ</a></li>
             <li>
               <a class="dropdown-item" href="./contact.html">Kontakt</a>
             </li>
@@ -122,44 +121,49 @@
         </div>
       </nav>
     </header>
-    <p></p>
+
     <!--------------------------Content-------------------------->
     <main>
-      <div class="content">
-        <div class="mainsection">
+      <div id="content">
+        <div id="mainsection">
           <section>
-            <h2>Impressum</h2>
-            <p></p>
+            <h1>Impressum</h1>
+
             <p>
-              ReduceYourFootprint Initiative <br />
-              Maurerstraße 20<br />
-              6900 Bregenz<br />
-              Österreich<br />
+              ReduceYourFootprint Initiative<span id="break"></span>
+              Maurerstraße 20<span id="break"></span> 6900 Bregenz<span
+                id="break"
+              ></span>
+              Österreich<span id="break"></span>
             </p>
             <p>
-              Vertreten durch: Frederik Hartmann<br />
-              Vorstandsvorsitzender: Max Bauer<br />
+              Vertreten durch: Frederik Hartmann<span id="break"></span>
+              Vorstandsvorsitzender: Max Bauer<span id="break"></span>
             </p>
             <p>
-              Kontakt: <br />
-              Telefon: +43 (0) 664 4563820<br />
-              E-Mail: info@reduceyourfootprint.at<br />
+              Kontakt: <span id="break"></span> Telefon: +43 (0) 664
+              4563820<span id="break"></span> E-Mail:
+              info@reduceyourfootprint.at<span id="break"></span>
             </p>
             <p>
-              Registereintrag:<br />
-              Eintragung im Vereinsregister.<br />
-              Registergericht: Amtsgericht Bregenz<br />
-              Registernummer: VR 12345<br />
+              Registereintrag:<span id="break"></span> Eintragung im
+              Vereinsregister.<span id="break"></span> Registergericht:
+              Amtsgericht Bregenz<span id="break"></span> Registernummer: VR
+              12345<span id="break"></span>
             </p>
             <p>
-              Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br />
-              Frederik Hartmann<br />
-              Maurerstraße 20<br />
-              6900 Bregenz<br />
+              Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<span
+                id="break"
+              ></span>
+              Frederik Hartmann<span id="break"></span> Maurerstraße 20<span
+                id="break"
+              ></span>
+              6900 Bregenz<span id="break"></span>
             </p>
-            <p>Haftungsausschluss:<br /></p>
+            <p>Haftungsausschluss:</p>
+            <span id="break"></span>
             <p>
-              Haftung für Inhalte<br />
+              <u>Haftung für Inhalte</u><span id="break"></span>
               Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene
               Inhalte auf diesen Seiten nach den allgemeinen Gesetzen
               verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter
@@ -174,7 +178,7 @@
               diese Inhalte umgehend entfernen.
             </p>
             <p>
-              Haftung für Links<br />
+              <u>Haftung für Links</u><span id="break"></span>
               Unser Angebot enthält Links zu externen Webseiten Dritter, auf
               deren Inhalte wir keinen Einfluss haben. Deshalb können wir für
               diese fremden Inhalte auch keine Gewähr übernehmen. Für die
@@ -188,7 +192,7 @@
               Rechtsverletzungen werden wir derartige Links umgehend entfernen.
             </p>
             <p>
-              Urheberrecht<br />
+              <u>Urheberrecht</u><span id="break"></span>
               Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
               diesen Seiten unterliegen dem deutschen Urheberrecht. Die
               Vervielfältigung, Bearbeitung, Verbreitung und jede Art der
@@ -233,6 +237,5 @@
         </div>
       </nav>
     </footer>
-    <script src="../src/index.js"></script>
   </body>
 </html>
